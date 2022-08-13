@@ -9,13 +9,16 @@
   width: 920px;
   display: flex;
   justify-content: space-between;
-  line-height: 60px;
-  text-align: center;
+  align-items: center;
   margin: 0 auto;
 }
 .header-title a {
   font-size: 24px;
   font-family: serif;
+}
+.header-right img {
+  height: 30px;
+  width: 30px;
 }
 .body {
   height: calc(100vh - 60px - 60px);
@@ -33,9 +36,13 @@
   display:flex;
   justify-content: space-between;
   align-items: center;
-  line-height: 60px;
+  height: 60px;
   width: 920px;
   margin: 0 auto;
+}
+.footer-menu img {
+  height: 30px;
+  width: 30px;
 }
 * a {
   text-decoration: none;

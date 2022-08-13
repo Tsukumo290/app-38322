@@ -1,33 +1,34 @@
-.sign-in-content {
+.user-form-content {
   height: 750px;
   width: 750px;
   background-color: white;
   border: 1px solid lightgray;
   margin: 37px auto 0;
 }
-.sign-in-title {
+.user-form-title {
   height: 100px;
   line-height: 100px;
   text-align: center;
   font-size: 21px;
 }
-.sign-in-form {
+.user-form {
   width: 350px;
   margin: 0 auto;
 }
-.sign-in-input input {
+.user-form-input input {
   height: 50px;
   width: 100%;
   padding-left: 10px;
   margin-bottom: 20px;
 }
-.sign-in-btn input {
+.user-form-btn input {
   height: 40px;
   width: 100%;
   border-radius: 20px;
   border: none;
   color: white;
   background-color: orange;
+  cursor: pointer;
 }
 .others-sign-in {
   height: 35px;

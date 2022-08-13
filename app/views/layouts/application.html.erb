@@ -1,15 +1,37 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>App38322</title>
+    <title>OriginalApp</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+  <header class="header">
+    <div class="header-menu">
+      <%# if user_signed_in? %>
+      <div class="header-title"><%= link_to "タイトル", "#" %></div>
+      <div class="header-right"><%= link_to "新規保管", "#" %></div>
+      <%# end %>
+    </div>
+  </header>
+
   <body>
+    <div class="body">
     <%= yield %>
+    </div>
   </body>
+
+  <footer class="footer">
+    <%# if user_signed_in? %>
+    <div class="footer-menu">
+    <div><%= link_to "クローゼット", "#" %></div>
+    <div><%= link_to "フリマ", "#" %></div>
+    <div><%= link_to "メモ", "#" %></div>
+    <div><%= link_to "統計", "#" %></div>
+    </div>
+    <%# end %>
+  </footer>
 </html>

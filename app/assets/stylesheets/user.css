@@ -1,0 +1,68 @@
+.sign-in-content {
+  height: 750px;
+  width: 750px;
+  background-color: white;
+  border: 1px solid lightgray;
+  margin: 37px auto 0;
+}
+.sign-in-title {
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  font-size: 21px;
+}
+.sign-in-form {
+  width: 350px;
+  margin: 0 auto;
+}
+.sign-in-input input {
+  height: 50px;
+  width: 100%;
+  padding-left: 10px;
+  margin-bottom: 20px;
+}
+.sign-in-btn input {
+  height: 40px;
+  width: 100%;
+  border-radius: 20px;
+  border: none;
+  color: white;
+  background-color: orange;
+}
+.others-sign-in {
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+}
+.sign-in {
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  width: 100%;
+  border-radius: 20px;
+}
+.m {
+  border: 1px solid orange;
+  margin-bottom: 20px;
+}
+.m a {
+  color: orange;
+}
+.t {
+  border: 1px solid #00acee;
+}
+.t a {
+  color: #00acee;
+}
+.g {
+  background-color: gray;
+  margin-bottom: 20px;
+}
+.g a {
+  color: white;
+}
+.others-account {
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+}

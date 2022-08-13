@@ -12,7 +12,7 @@
   <header class="header">
     <% if user_signed_in? %>
     <div class="header-menu">
-      <div class="header-title"><%= link_to "タイトル", "#" %></div>
+      <div class="header-title"><%= link_to "タイトル", root_path %></div>
       <div class="header-right">
         <div><%= link_to image_tag("clothes.png"), "#" %></div>
         <div><%= link_to image_tag("user.png"), edit_user_path(current_user) %></div>
@@ -30,7 +30,7 @@
   <footer class="footer">
     <% if user_signed_in? %>
     <div class="footer-menu">
-      <div><%= link_to image_tag("closet.png"), "#" %></div>
+      <div><%= link_to image_tag("closet.png"), root_path %></div>
       <div><%= link_to image_tag("furima.png"), "#" %></div>
       <div><%= link_to image_tag("memo.png"), "#" %></div>
       <div><%= link_to image_tag("graph.png"), "#" %></div>

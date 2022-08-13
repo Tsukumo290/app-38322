@@ -15,7 +15,7 @@
     <div class="others-sign-in">または</div>
     <div class="sign-in m"><%= link_to "メールアドレスで新規登録", new_registration_path(resource_name) %></div>
     <div class="others-account">他のアカウントでログイン</div>
-    <div class="sign-in g"><%= link_to "ゲストログイン", "#" %></div>
+    <div class="sign-in g"><%= link_to "ゲストログイン", users_guest_sign_in_path, method: :post %></div>
     <div class="sign-in t"><%= link_to "Twitterでログイン", "#" %></div>
   </div>
 </div>

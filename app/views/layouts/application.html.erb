@@ -15,7 +15,7 @@
       <div class="header-title"><%= link_to "タイトル", "#" %></div>
       <div class="header-right">
         <div><%= link_to image_tag("clothes.png"), "#" %></div>
-        <div><%= link_to image_tag("user.png"), "" %></div>
+        <div><%= link_to image_tag("user.png"), edit_user_path(current_user) %></div>
       </div>
     </div>
     <% end %>

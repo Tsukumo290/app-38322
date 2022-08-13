@@ -15,9 +15,10 @@
       <div class='user-form-input'>
         <%= f.password_field :password_confirmation, placeholder: "パスワードの再入力", autocomplete: "off"%>
       </div>
-      <div class='user-form-btn'>
+      <div class='user-form-btn new'>
         <%= f.submit "新規登録" %>
       </div>
     <% end %>
+    <div class="sign-in m"><%= link_to "既存のアカウントでログイン", new_session_path(resource_name) %></div>
   </div>
 </div>

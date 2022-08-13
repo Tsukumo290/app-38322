@@ -71,3 +71,10 @@
 .new {
   margin-bottom: 20px;
 }
+
+.o {
+  border: 1px solid gray;
+}
+.o a {
+  color: gray;
+}

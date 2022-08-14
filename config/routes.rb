@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   end
   root to: "closets#index"
   resources :users, only: [:edit, :update]
+  resources :closets, only: [:index, :new, :create]
 end

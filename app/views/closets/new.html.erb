@@ -1,14 +1,16 @@
-<div>
+<div class="clothes-form-content">
     <%= form_with(model: @closet, local: true) do |form| %>
+      <div class="clothes-form">
 
-      <div><%= form.file_field :image %></div>
-      <div><%= form.text_field :brand, placeholder: "ブランド" %></div>
-      <div><%= form.text_field :price, placeholder:"購入額" %></div>
-      <div><%= form.collection_select(:genre_id, Genre.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %></div>
-      <div><%= form.collection_select(:color_id, Color.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %></div>
-      <div><%= form.collection_select(:size_id, Size.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %></div>
-      <div><%= form.collection_select(:season_id, Season.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %></div>
+        <div class="clothes-image"><%= form.file_field :image %></div>
+        <div class="clothes-brand"><%= form.text_field :brand, placeholder: "ブランド" %></div>
+        <div class="clothes-price"><%= form.text_field :price, placeholder:"購入額" %></div>
+        <div><%= form.collection_select(:genre_id, Genre.all, :id, :name, {}, {class:"select-box", id:"clothes-category"}) %></div>
+        <div><%= form.collection_select(:color_id, Color.all, :id, :name, {}, {class:"select-box", id:"clothes-category"}) %></div>
+        <div><%= form.collection_select(:size_id, Size.all, :id, :name, {}, {class:"select-box", id:"clothes-category"}) %></div>
+        <div><%= form.collection_select(:season_id, Season.all, :id, :name, {}, {class:"select-box", id:"clothes-category"}) %></div>
+        <div><%= form.submit "保管する" %></div>
 
-      <div><%= form.submit "保管する" %></div>
+      </div>
     <% end %>
 </div>

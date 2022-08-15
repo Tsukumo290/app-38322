@@ -1,6 +1,14 @@
-<%= form_with(model: @closet, local: true) do |form| %>
-      <%= form.text_field :name, placeholder: "Nickname" %>
-      <%= form.text_field :image, placeholder: "Image Url" %>
-      <%= form.text_area :text, placeholder: "text", rows: "10" %>
-      <%= form.submit "SEND" %>
+<div>
+    <%= form_with(model: @closet, local: true) do |form| %>
+
+      <div><%= form.file_field :image %></div>
+      <div><%= form.text_field :brand, placeholder: "ブランド" %></div>
+      <div><%= form.text_field :price, placeholder:"購入額" %></div>
+      <div><%= form.collection_select(:genre_id, Genre.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %></div>
+      <div><%= form.collection_select(:color_id, Color.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %></div>
+      <div><%= form.collection_select(:size_id, Size.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %></div>
+      <div><%= form.collection_select(:season_id, Season.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %></div>
+
+      <div><%= form.submit "保管する" %></div>
     <% end %>
+</div>

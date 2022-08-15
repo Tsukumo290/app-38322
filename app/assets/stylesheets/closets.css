@@ -30,6 +30,11 @@
   border-top:none;
   background: white;
 }
+.panel-group img {
+  height: 280px;
+  width: 280px;
+  object-fit: cover;
+}
 .panel{
   display:none;
   height: 1000px;
@@ -68,4 +73,36 @@
   border: 1px solid lightgray;
   margin: 0 auto;
   margin-top: 37px;
+}
+.image-preview img {
+  height: 320px;
+  width: 320px;
+  object-fit: cover;
+}
+.image-form {
+  margin-bottom: 6.5px;
+}
+.form-right {
+  margin-left: 6.5px;
+}
+.clothes-form {
+  width: 650px;
+  margin: 193px auto;
+  display: flex;
+}
+.clothes-category input {
+  width: 320px;
+  height: 45px;
+  margin-bottom: 6.5px;
+  padding-left: 10px;
+}
+.select-box {
+  width: 320px;
+  height: 45px;
+  margin-bottom: 6.5px;
+  padding-left: 10px;
+}
+.closet-submit input {
+  width: 320px;
+  height: 45px;
 }

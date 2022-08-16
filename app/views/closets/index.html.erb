@@ -20,7 +20,28 @@
     <div class="panel-group">
       <div class="panel tab-A is-show">Content-A</div>
       <div class="panel tab-B">Content-B</div>
-      <div class="panel tab-C">Content-C</div>
+
+      <div class="panel tab-C">
+        <div class="clothes-genre">アウター</div>
+        <div class="genre-images">
+          <% @closets.where(genre_id: 1, season_id: 3).each do |closet| %>
+            <div class="genre-image"><%=image_tag closet.image %></div>
+          <% end %>
+        </div>
+        <div class="clothes-genre">トップス</div>
+        <div class="genre-images">
+          <% @closets.where(genre_id: 2, season_id: 3).each do |closet| %>
+            <div class="genre-image"><%=image_tag closet.image %></div>
+          <% end %>
+        </div>
+        <div class="clothes-genre">ボトムス</div>
+        <div class="genre-images">
+          <% @closets.where(genre_id: 3, season_id: 3).each do |closet| %>
+            <div class="genre-image"><%=image_tag closet.image %></div>
+          <% end %>
+        </div>
+      </div>
+
       <div class="panel tab-D">Content-D</div>
       <div class="panel tab-F">Content-F</div>
     </div>

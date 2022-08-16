@@ -1,7 +1,7 @@
 class ClosetsController < ApplicationController
 
   def index
-    @closets = Closet.all 
+    @closets = Closet.all
   end
 
   def new

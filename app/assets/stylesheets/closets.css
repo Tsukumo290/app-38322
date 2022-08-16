@@ -31,13 +31,14 @@
   background: white;
 }
 .panel-group img {
-  height: 240px;
-  width: 240px;
+  height: 270px;
+  width: 270px;
   object-fit: cover;
+  margin-left: 22px;
 }
 .panel{
   display:none;
-  height: 1060px;
+  height: 1180px;
 
 }
 .tab.is-active{
@@ -66,14 +67,26 @@
   font-size: 24px;
 }
 .clothes-genre {
-  height: 90px;
-  line-height: 90px;
+  height: 100px;
+  width: 100%;
+
+}
+.genre-menu {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 750px;
+  line-height: 100px;
   text-align: center;
-  font-size: 21px;
+  padding-left: 340px;
+}
+.genre-title {
+   font-size: 22px;
 }
 .genre-images {
   display: flex;
-  height: 250px;
+  height: 280px;
+  padding-right: 22px;
   overflow-x: scroll;
   -ms-overflow-style: none;    /* IE, Edge 対応 */
   scrollbar-width: none;       /* Firefox 対応 */
@@ -81,7 +94,6 @@
 .genre-images::-webkit-scrollbar {  /* Chrome, Safari 対応 */
   display:none;
 }
-
 /* post-formページのcss */
 
 .clothes-form-content {

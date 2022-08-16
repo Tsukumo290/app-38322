@@ -25,7 +25,7 @@
         <div class="clothes-genre">アウター</div>
         <div class="genre-images">
           <% @closets.where(genre_id: 1, season_id: 3).each do |closet| %>
-            <div class="genre-image"><%=image_tag closet.image %></div>
+            <div class="genre-image"><%= link_to image_tag(closet.image), closet_path(closet.id) %></div>
           <% end %>
         </div>
         <div class="clothes-genre">トップス</div>

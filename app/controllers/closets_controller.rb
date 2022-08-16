@@ -4,6 +4,10 @@ class ClosetsController < ApplicationController
     @closets = Closet.order(:color_id)
   end
 
+  def show
+    @closet = Closet.find(params[:id])
+  end
+
   def new
     @closet = Closet.new
   end

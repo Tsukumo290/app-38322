@@ -30,29 +30,39 @@
         </div>
         <div class="genre-images">
           <% @closets.where(genre_id: 1, season_id: 3).each do |closet| %>
-            <div class="genre-image"><%= link_to image_tag(closet.image), closet_path(closet.id) %></div>
+            <div class="genre-image">
+              <%= link_to closet_path(closet.id), remote: true do %>
+                <%= image_tag closet.image %>
+              <% end %>
+            </div>
           <% end %>
         </div>
         <div class="clothes-genre">
           <div class="genre-menu">
             <div class="genre-title">トップス</div>
-            
           </div>
         </div>
         <div class="genre-images">
           <% @closets.where(genre_id: 2, season_id: 3).each do |closet| %>
-            <div class="genre-image"><%=image_tag closet.image %></div>
+            <div class="genre-image">
+              <%= link_to closet_path(closet.id), remote: true do %>
+                <%= image_tag closet.image %>
+              <% end %>
+            </div>
           <% end %>
         </div>
         <div class="clothes-genre">
           <div class="genre-menu">
             <div class="genre-title">ボトムス</div>
-            
           </div>
         </div>
         <div class="genre-images">
           <% @closets.where(genre_id: 3, season_id: 3).each do |closet| %>
-            <div class="genre-image"><%=image_tag closet.image %></div>
+            <div class="genre-image">
+              <%= link_to closet_path(closet.id), remote: true do %>
+                <%= image_tag closet.image %>
+              <% end %>
+            </div>
           <% end %>
         </div>
       </div>
@@ -62,4 +72,9 @@
     </div>
   </div>
   
+</div>
+
+<div id="mask" class="hidden"></div>
+<div id="modal" class="hidden">
+  <p>モーダルウィンドウ<p>
 </div>

@@ -2,6 +2,7 @@ class ClosetsController < ApplicationController
 
   def index
     @closets = Closet.order(:color_id)
+    @memos = Memo.all
   end
 
   def show
@@ -10,6 +11,7 @@ class ClosetsController < ApplicationController
       format.html
       format.js
     end
+    @memo = Memo.new
   end
 
   def new

@@ -179,6 +179,7 @@
   width: 750px;
   background-color: white;
   padding: 115px 20px;
+  display: flex;
 }
 .show-image img {
   height: 320px;
@@ -192,4 +193,18 @@
   line-height: 50px;
   text-align: left;
   font-size: 17px;
+}
+.show-right {
+  height: 520px;
+  width: 320px;
+}
+#memo-display {
+  height: 470px;
+  width: 100%;
+  overflow: scroll;
+  background-color: aqua;
+}
+.memo-form {
+  height: 50px;
+  background-color: blue;
 }

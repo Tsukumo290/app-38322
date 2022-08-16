@@ -4,8 +4,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   
-  has_many :closets
-  has_many :memos
+  has_many :closets, dependent: :destroy
+  has_many :memos, dependent: :destroy
 
   validates :name, presence: true, length: { maximum: 20 }
 

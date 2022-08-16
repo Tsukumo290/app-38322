@@ -10,5 +10,14 @@
 
   <div class="show-right">
 
+    <div id="memo-display">
+      <%= render 'memos/post_memos', closet: @closet %>
+    </div>
+
+    <div class="memo-form">
+      <%= render 'memos/form', closet: @closet, memo: @memo %>
+    </div>
+
   </div>
+
 </div>

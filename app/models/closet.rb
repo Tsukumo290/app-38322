@@ -1,6 +1,6 @@
 class Closet < ApplicationRecord
   belongs_to :user
-  has_many :memos
+  has_many :memos, dependent: :destroy
   has_one_attached :image
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :genre

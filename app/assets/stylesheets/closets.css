@@ -137,6 +137,8 @@
   height: 45px;
 }
 
+/*モーダルウィンドウのcss*/
+
 #mask {
   background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
@@ -170,8 +172,24 @@
   transform: translate(0, 0) scale(0.8);
 }
 
+/* show画面のcss */
+
 .show {
   height: 750px;
   width: 750px;
   background-color: white;
+  padding: 115px 20px;
+}
+.show-image img {
+  height: 320px;
+  width: 320px;
+  object-fit: cover;
+}
+.show-category {
+  height: 50px;
+  border-bottom: 1px solid lightgray;
+  width: 320px;
+  line-height: 50px;
+  text-align: left;
+  font-size: 17px;
 }

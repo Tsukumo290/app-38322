@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   
   has_many :closets
+  has_many :memos
 
   validates :name, presence: true, length: { maximum: 20 }
 

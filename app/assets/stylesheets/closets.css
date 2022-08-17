@@ -178,8 +178,20 @@
   height: 750px;
   width: 750px;
   background-color: white;
-  padding: 115px 45px;
+  padding: 22.5px 45px 0;
+}
+.show-menu {
   display: flex;
+  justify-content: right;
+  height: 67.5px;
+}
+.show-delete {
+  margin-left: 15px;
+}
+.show-contents {
+  display: flex;
+  height: 100%;
+  width: 100%;
 }
 .show-image img {
   height: 320px;
@@ -209,7 +221,7 @@
   margin-left: 20px;
 }
 #memo-display {
-  height: 475px;
+  height: 525px;
   width: 100%;
   overflow: scroll;
   -ms-overflow-style: none;    /* IE, Edge 対応 */
@@ -236,4 +248,9 @@
 }
 .memo-form-display {
   display: flex;
+}
+.memo button {
+  background-color: white;
+  cursor: pointer;
+  border: 1px solid gray;
 }

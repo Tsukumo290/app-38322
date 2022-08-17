@@ -1,21 +1,31 @@
 <div class="show">
 
-  <div class="show-left">
-    <div class="show-image"><%= image_tag @closet.image %></div>
-    <div class="show-category scroll"><%= "ブランド：#{@closet.brand}" %></div>
-    <div class="show-category"><%= "サイズ：#{@closet.size.name}" %></div>
-    <div class="show-category"><%= "カラー：#{@closet.color.name}" %></div>
-    <div class="show-category"><%= "購入金額：#{@closet.price}" %></div>
+  <div class="show-menu">
+    <div class="show-edit"><%= link_to "編集", "#" %></div>
+    <div class="show-delete"><%= link_to "削除", "#" %></div>
   </div>
 
-  <div class="show-right">
+  <div class="show-contents">
 
-    <div id="memo-display">
-      <%= render 'memos/post_memos', closet: @closet %>
+    <div class="show-left">
+      <div class="show-image"><%= image_tag @closet.image %></div>
+      <div class="show-category scroll"><%= "ブランド：#{@closet.brand}" %></div>
+      <div class="show-category"><%= "サイズ：#{@closet.size.name}" %></div>
+      <div class="show-category"><%= "カラー：#{@closet.color.name}" %></div>
+      <div class="show-category"><%= "購入金額：#{@closet.price}" %></div>
+      <div class="show-category"><%= "保管日：#{@closet.created_at.strftime('%Y/%m/%d')}" %></div>
     </div>
 
-    <div class="memo-form">
-      <%= render 'memos/form', closet: @closet, memo: @memo %>
+    <div class="show-right">
+
+      <div id="memo-display">
+        <%= render 'memos/post_memos', closet: @closet %>
+      </div>
+
+      <div class="memo-form">
+        <%= render 'memos/form', closet: @closet, memo: @memo %>
+      </div>
+
     </div>
 
   </div>

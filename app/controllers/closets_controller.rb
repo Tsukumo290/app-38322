@@ -27,12 +27,6 @@ class ClosetsController < ApplicationController
     end
   end
 
-  def edit
-  end
-
-  def update
-  end
-
   def destroy
     @closet = Closet.find(params[:id])
     @closet.destroy

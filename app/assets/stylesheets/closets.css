@@ -185,9 +185,6 @@
   justify-content: right;
   height: 67.5px;
 }
-.show-delete {
-  margin-left: 15px;
-}
 .show-contents {
   display: flex;
   height: 100%;
@@ -253,4 +250,7 @@
   background-color: white;
   cursor: pointer;
   border: 1px solid gray;
+}
+.memo {
+  margin-bottom: 5px;
 }

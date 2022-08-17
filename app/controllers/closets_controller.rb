@@ -27,6 +27,18 @@ class ClosetsController < ApplicationController
     end
   end
 
+  def edit
+  end
+
+  def update
+  end
+
+  def destroy
+    @closet = Closet.find(params[:id])
+    @closet.destroy
+    redirect_to root_path
+  end
+
   private
   def closet_params
     params.require(:closet).permit(:brand, :price, :image, :genre_id, :color_id, :season_id, :size_id).merge(user_id: current_user.id)

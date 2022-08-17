@@ -2,7 +2,7 @@
 
   <div class="show-menu">
     <div class="show-edit"><%= link_to "編集", "#" %></div>
-    <div class="show-delete"><%= link_to "削除", "#" %></div>
+    <div class="show-delete"><%= link_to "削除", closet_path(@closet.id), method: :delete %></div>
   </div>
 
   <div class="show-contents">

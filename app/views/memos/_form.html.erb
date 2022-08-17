@@ -1,4 +1,5 @@
 <%= form_with model: [@closet, @memo], id: "memo-form" do |f| %>
-        <%= f.text_field :content, class: "memo-content" %>
-        <%= f.submit "作成" %>
+        <div class="memo-form-display">
+        <%= f.text_field :content, class: "memo-content", placeholder: "メモ" %>
+        <%= f.submit "作成", class: "memo-form-submit" %>
       <% end %>

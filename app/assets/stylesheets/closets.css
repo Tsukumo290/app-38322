@@ -10,7 +10,7 @@
   cursor:pointer;
   border-bottom: 1px solid #CCC;
 }
-/*.spring {
+.spring {
   background-color: #f7c8d1;
 }
 .summer {
@@ -24,7 +24,7 @@
 }
 .others {
   background-color: lightgray;
-}*/
+}
 .panel-group{
   border:solid 1px #CCC;
   border-top:none;
@@ -47,7 +47,7 @@
   border-right:solid 1px #CCC;
   border-bottom:solid 1px white;
   border-left:solid 1px #CCC;
-  background-color: white;
+
 }
 .panel.is-show{
   display:block;
@@ -178,7 +178,7 @@
   height: 750px;
   width: 750px;
   background-color: white;
-  padding: 115px 20px;
+  padding: 115px 45px;
   display: flex;
 }
 .show-image img {
@@ -194,17 +194,46 @@
   text-align: left;
   font-size: 17px;
 }
+.scroll {
+  overflow: scroll;
+  white-space:nowrap;
+  -ms-overflow-style: none;    /* IE, Edge 対応 */
+  scrollbar-width: none;       /* Firefox 対応 */
+}
+.scroll::-webkit-scrollbar {  /* Chrome, Safari 対応 */
+  display:none;
+}
 .show-right {
   height: 520px;
   width: 320px;
+  margin-left: 20px;
 }
 #memo-display {
-  height: 470px;
+  height: 475px;
   width: 100%;
   overflow: scroll;
-  background-color: aqua;
+  -ms-overflow-style: none;    /* IE, Edge 対応 */
+  scrollbar-width: none;       /* Firefox 対応 */
+}
+#memo-display::-webkit-scrollbar {  /* Chrome, Safari 対応 */
+  display:none;
 }
 .memo-form {
   height: 50px;
-  background-color: blue;
+}
+.memo-content input {
+  height: 50px;
+  display: block;
+}
+.memo-content {
+  width: 270px;
+  padding-left: 10px;
+}
+.memo-form-submit {
+  height: 50px;
+  width: 50px;
+  display: block;
+}
+.memo-form-display {
+  display: flex;
 }

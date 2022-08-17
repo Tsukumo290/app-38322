@@ -18,53 +18,130 @@
     
     <!--タブを切り替えて表示するコンテンツ-->
     <div class="panel-group">
-      <div class="panel tab-A is-show">Content-A</div>
+
+      <div class="panel tab-A is-show">
+
+        <% if @closets.where(genre_id: 1, season_id: 1).present? %>
+          <div class="clothes-genre">
+            <div class="genre-menu">
+              <div class="genre-title">アウター</div>
+              <div class="genre-sort">並び順/新しい順/古い順</div>
+            </div>
+          </div>
+          <div class="genre-images">
+            <% @closets.where(genre_id: 1, season_id: 1).each do |closet| %>
+              <div class="genre-image">
+                <%= link_to closet_path(closet.id), remote: true do %>
+                  <%= image_tag closet.image %>
+                <% end %>
+              </div>
+            <% end %>
+          </div>
+        <% end %>
+
+        <% if @closets.where(genre_id: 2, season_id: 1).present? %>
+          <div class="clothes-genre">
+            <div class="genre-menu">
+              <div class="genre-title">トップス</div>
+              <% unless @closets.where(genre_id: 1, season_id: 1).present? %>
+                <div class="genre-sort">並び順/新しい順/古い順</div>
+              <% end %>
+            </div>
+          </div>
+          <div class="genre-images">
+            <% @closets.where(genre_id: 2, season_id: 1).each do |closet| %>
+              <div class="genre-image">
+                <%= link_to closet_path(closet.id), remote: true do %>
+                  <%= image_tag closet.image %>
+                <% end %>
+              </div>
+            <% end %>
+          </div>
+        <% end %>
+
+        <% if @closets.where(genre_id: 3, season_id: 1).present? %>
+          <div class="clothes-genre">
+            <div class="genre-menu">
+              <div class="genre-title">ボトムス</div>
+              <% unless @closets.where(genre_id: 1, season_id: 1) && @closets.where(genre_id: 2, season_id: 1).present? %>
+                <div class="genre-sort">並び順/新しい順/古い順</div>
+              <% end %>
+            </div>
+          </div>
+          <div class="genre-images">
+            <% @closets.where(genre_id: 3, season_id: 1).each do |closet| %>
+              <div class="genre-image">
+                <%= link_to closet_path(closet.id), remote: true do %>
+                  <%= image_tag closet.image %>
+                <% end %>
+              </div>
+            <% end %>
+          </div>
+        <% end %>
+
+      </div>
+
       <div class="panel tab-B">Content-B</div>
 
       <div class="panel tab-C">
-        <div class="clothes-genre">
-          <div class="genre-menu">
-            <div class="genre-title">アウター</div>
-            <div class="genre-sort">並び順/新しい順/古い順</div>
+        <% if @closets.where(genre_id: 1, season_id: 3).present? %>
+          <div class="clothes-genre">
+            <div class="genre-menu">
+              <div class="genre-title">アウター</div>
+              <div class="genre-sort">並び順/新しい順/古い順</div>
+            </div>
           </div>
-        </div>
-        <div class="genre-images">
-          <% @closets.where(genre_id: 1, season_id: 3).each do |closet| %>
-            <div class="genre-image">
-              <%= link_to closet_path(closet.id), remote: true do %>
-                <%= image_tag closet.image %>
+          <div class="genre-images">
+            <% @closets.where(genre_id: 1, season_id: 3).each do |closet| %>
+              <div class="genre-image">
+                <%= link_to closet_path(closet.id), remote: true do %>
+                  <%= image_tag closet.image %>
+                <% end %>
+              </div>
+            <% end %>
+          </div>
+        <% end %>
+
+        <% if @closets.where(genre_id: 2, season_id: 3).present? %>
+          <div class="clothes-genre">
+            <div class="genre-menu">
+              <div class="genre-title">トップス</div>
+              <% unless @closets.where(genre_id: 1, season_id: 3).present? %>
+                <div class="genre-sort">並び順/新しい順/古い順</div>
               <% end %>
             </div>
-          <% end %>
-        </div>
-        <div class="clothes-genre">
-          <div class="genre-menu">
-            <div class="genre-title">トップス</div>
           </div>
-        </div>
-        <div class="genre-images">
-          <% @closets.where(genre_id: 2, season_id: 3).each do |closet| %>
-            <div class="genre-image">
-              <%= link_to closet_path(closet.id), remote: true do %>
-                <%= image_tag closet.image %>
+          <div class="genre-images">
+            <% @closets.where(genre_id: 2, season_id: 3).each do |closet| %>
+              <div class="genre-image">
+                <%= link_to closet_path(closet.id), remote: true do %>
+                  <%= image_tag closet.image %>
+                <% end %>
+              </div>
+            <% end %>
+          </div>
+        <% end %>
+
+        <% if @closets.where(genre_id: 3, season_id: 3).present? %>
+          <div class="clothes-genre">
+            <div class="genre-menu">
+              <div class="genre-title">ボトムス</div>
+              <% unless @closets.where(genre_id: 1, season_id: 3) && @closets.where(genre_id: 2, season_id: 3).present? %>
+                <div class="genre-sort">並び順/新しい順/古い順</div>
               <% end %>
             </div>
-          <% end %>
-        </div>
-        <div class="clothes-genre">
-          <div class="genre-menu">
-            <div class="genre-title">ボトムス</div>
           </div>
-        </div>
-        <div class="genre-images">
-          <% @closets.where(genre_id: 3, season_id: 3).each do |closet| %>
-            <div class="genre-image">
-              <%= link_to closet_path(closet.id), remote: true do %>
-                <%= image_tag closet.image %>
-              <% end %>
-            </div>
-          <% end %>
-        </div>
+          <div class="genre-images">
+            <% @closets.where(genre_id: 3, season_id: 3).each do |closet| %>
+              <div class="genre-image">
+                <%= link_to closet_path(closet.id), remote: true do %>
+                  <%= image_tag closet.image %>
+                <% end %>
+              </div>
+            <% end %>
+          </div>
+        <% end %>
+
       </div>
 
       <div class="panel tab-D">Content-D</div>

@@ -4,11 +4,13 @@
 }
 .tab{
   flex-grow: 1;
-  padding:5px;
   list-style:none;
   text-align:center;
   cursor:pointer;
   border-bottom: 1px solid #CCC;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
 }
 .spring {
   background-color: #f7c8d1;
@@ -78,7 +80,7 @@
   width: 750px;
   line-height: 100px;
   text-align: center;
-  padding-left: 330px;
+  padding-left: 333px;
 }
 .genre-title {
    font-size: 22px;

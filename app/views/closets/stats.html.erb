@@ -24,11 +24,15 @@
         </div>
         <div class="panel tab-B">
           <div class="panel-category">カテゴリー</div>
-          <%= pie_chart @closets.where(season_id: 2).group(:genre_id).count, legend: false  %>
+          <%= pie_chart @closets.where(season_id: 2).group(:genre_id).count, legend: false %>
+          <div class="item-count">アイテム数</div>
+          <div class="category-count"><span class="color1">●</span><%= "アウター：#{@closets.where(genre_id: 1, season_id: 2).length}" %></div>
+          <div class="category-count"><span class="color2">●</span><%= "トップス：#{@closets.where(genre_id: 2, season_id: 2).length}" %></div>
+          <div class="category-count"><span class="color3">●</span><%= "ボトムス：#{@closets.where(genre_id: 3, season_id: 2).length}" %></div>
         </div>
         <div class="panel tab-C">
           <div class="panel-category">カテゴリー</div>
-          <%= pie_chart @closets.where(season_id: 3).group(:genre_id).count, legend: false  %>
+          <%= pie_chart @closets.where(season_id: 3).group(:genre_id).count, legend: false %>
           <div class="item-count">アイテム数</div>
           <div class="category-count"><span class="color1">●</span><%= "アウター：#{@closets.where(genre_id: 1, season_id: 3).length}" %></div>
           <div class="category-count"><span class="color2">●</span><%= "トップス：#{@closets.where(genre_id: 2, season_id: 3).length}" %></div>
@@ -36,7 +40,11 @@
         </div>
         <div class="panel tab-D">
           <div class="panel-category">カテゴリー</div>
-          <%= pie_chart @closets.where(season_id: 4).group(:genre_id).count, legend: false  %>
+          <%= pie_chart @closets.where(season_id: 4).group(:genre_id).count, legend: false %>
+          <div class="item-count">アイテム数</div>
+          <div class="category-count"><span class="color1">●</span><%= "アウター：#{@closets.where(genre_id: 1, season_id: 4).length}" %></div>
+          <div class="category-count"><span class="color2">●</span><%= "トップス：#{@closets.where(genre_id: 2, season_id: 4).length}" %></div>
+          <div class="category-count"><span class="color3">●</span><%= "ボトムス：#{@closets.where(genre_id: 3, season_id: 4).length}" %></div>
         </div>
       </div>
 

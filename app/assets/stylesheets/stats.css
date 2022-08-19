@@ -7,7 +7,56 @@
 }
 .stats-contents {
   display: flex;
+  width: 1200px;
+  margin: 0 auto;
 }
-.width {
+.panel-width {
   width: 600px;
+}
+.date {
+  height: 60px;
+  border-bottom: 1px solid lightgray;
+  font-size: 21px;
+  line-height: 60px;
+  text-align: center;
+  width: 550px;
+}
+.stats-right {
+  margin-top: 50px;
+  margin-left: 50px;
+}
+.panel-category {
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  font-size: 20px;
+}
+.item-count {
+  height: 60px;
+  width: 400px;
+  margin: 0 auto;
+  line-height: 60px;
+  text-align: center;
+  border-bottom: 1px solid gray;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+.category-count {
+  height: 35px;
+  width: 100%;
+  line-height: 35px;
+  text-align: center;
+  font-size: 18px;
+}
+.color1 {
+  color: blue;
+  margin-right:5px;
+}
+.color2 {
+  color: #ff0000;
+  margin-right:5px;
+}
+.color3 {
+  color: #fd7e00;
+  margin-right:5px;
 }

@@ -2,7 +2,7 @@
 <div class="stats-contents">
   <div>
 
-    <div class="tab-panel width">
+    <div class="tab-panel panel-width">
     
       <div>
         <ul class="tab-group">
@@ -15,15 +15,27 @@
 
       <div class="panel-group">
         <div class="panel tab-A is-show">
-          <%= pie_chart @closets.where(season_id: 1).group(:genre_id).count %>
+          <div class="panel-category">カテゴリー</div>
+          <%= pie_chart @closets.where(season_id: 1).group(:genre_id).count%>
+          <div class="item-count">アイテム数</div>
+          <div class="category-count"><span class="color1">●</span><%= "アウター：#{@closets.where(genre_id: 1, season_id: 1).length}" %></div>
+          <div class="category-count"><span class="color2">●</span><%= "トップス：#{@closets.where(genre_id: 2, season_id: 1).length}" %></div>
+          <div class="category-count"><span class="color3">●</span><%= "ボトムス：#{@closets.where(genre_id: 3, season_id: 1).length}" %></div>
         </div>
         <div class="panel tab-B">
+          <div class="panel-category">カテゴリー</div>
           <%= pie_chart @closets.where(season_id: 2).group(:genre_id).count %>
         </div>
         <div class="panel tab-C">
+          <div class="panel-category">カテゴリー</div>
           <%= pie_chart @closets.where(season_id: 3).group(:genre_id).count %>
+          <div class="item-count">アイテム数</div>
+          <div class="category-count"><span class="color1">●</span><%= "アウター：#{@closets.where(genre_id: 1, season_id: 3).length}" %></div>
+          <div class="category-count"><span class="color2">●</span><%= "トップス：#{@closets.where(genre_id: 2, season_id: 3).length}" %></div>
+          <div class="category-count"><span class="color3">●</span><%= "ボトムス：#{@closets.where(genre_id: 3, season_id: 3).length}" %></div>
         </div>
         <div class="panel tab-D">
+          <div class="panel-category">カテゴリー</div>
           <%= pie_chart @closets.where(season_id: 4).group(:genre_id).count %>
         </div>
       </div>
@@ -32,11 +44,11 @@
 
   </div>
 
-  <div>
-    <div><%= "クローゼット総資産額：¥#{@closets.sum(:price)}"%></div>
-    <div><%= "アイテム平均価格：¥#{@closets.sum(:price).fdiv(@closets.length).round}"%>
-    <div><%= "アイテム最高価格：¥#{@closets.maximum(:price)}"%></div>
-    <div><%= "所持アイテム数：#{@closets.length}"%></div>
+  <div class="stats-right">
+    <div class="date"><%= "クローゼット総資産額：¥#{@closets.sum(:price)}"%></div>
+    <div class="date"><%= "アイテム平均価格：¥#{@closets.sum(:price).fdiv(@closets.length).round}"%></div>
+    <div class="date"><%= "アイテム最高価格：¥#{@closets.maximum(:price)}"%></div>
+    <div class="date"><%= "所持アイテム数：#{@closets.length}"%></div>
   </div>
 
 </div>

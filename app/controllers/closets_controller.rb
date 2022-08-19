@@ -33,6 +33,10 @@ class ClosetsController < ApplicationController
     redirect_to root_path
   end
 
+  def stats
+    @closets = Closet.all
+  end
+
   private
   def closet_params
     params.require(:closet).permit(:brand, :price, :image, :genre_id, :color_id, :season_id, :size_id).merge(user_id: current_user.id)

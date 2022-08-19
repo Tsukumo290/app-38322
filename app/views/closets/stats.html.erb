@@ -1,0 +1,42 @@
+<div class="stats-title">統計</div>
+<div class="stats-contents">
+  <div>
+
+    <div class="tab-panel width">
+    
+      <div>
+        <ul class="tab-group">
+          <li class="tab tab-A is-active spring">春</li>
+          <li class="tab tab-B summer" >夏</li>
+          <li class="tab tab-C autumn">秋</li>
+          <li class="tab tab-D winter">冬</li>
+        </ul>
+      </div>
+
+      <div class="panel-group">
+        <div class="panel tab-A is-show">
+          <%= pie_chart @closets.where(season_id: 1).group(:genre_id).count %>
+        </div>
+        <div class="panel tab-B">
+          <%= pie_chart @closets.where(season_id: 2).group(:genre_id).count %>
+        </div>
+        <div class="panel tab-C">
+          <%= pie_chart @closets.where(season_id: 3).group(:genre_id).count %>
+        </div>
+        <div class="panel tab-D">
+          <%= pie_chart @closets.where(season_id: 4).group(:genre_id).count %>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div>
+    <div><%= "クローゼット総資産額：¥#{@closets.sum(:price)}"%></div>
+    <div><%= "アイテム平均価格：¥#{@closets.sum(:price).fdiv(@closets.length).round}"%>
+    <div><%= "アイテム最高価格：¥#{@closets.maximum(:price)}"%></div>
+    <div><%= "所持アイテム数：#{@closets.length}"%></div>
+  </div>
+
+</div>

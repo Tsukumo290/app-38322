@@ -38,7 +38,6 @@
             <% end %>
           </div>
         <% end %>
-        <%= pie_chart @closets.group(:color_id).count %>
 
         <% if @closets.where(genre_id: 2, season_id: 1).present? %>
           <div class="clothes-genre">

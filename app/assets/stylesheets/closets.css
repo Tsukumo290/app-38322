@@ -12,7 +12,7 @@
   line-height: 50px;
   text-align: center;
 }
-.spring {
+/*.spring {
   background-color: #f7c8d1;
 }
 .summer {
@@ -26,7 +26,7 @@
 }
 .others {
   background-color: lightgray;
-}
+}*/
 .panel-group{
   border:solid 1px #CCC;
   border-top:none;
@@ -49,7 +49,7 @@
   border-right:solid 1px #CCC;
   border-bottom:solid 1px white;
   border-left:solid 1px #CCC;
-
+  background: white;
 }
 .panel.is-show{
   display:block;

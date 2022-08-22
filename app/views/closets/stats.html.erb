@@ -16,7 +16,7 @@
       <div class="panel-group">
         <div class="panel tab-A is-show">
           <div class="panel-category">カテゴリー</div>
-          <%= pie_chart @closets.where(season_id: 1).group(:genre_id).count, legend: false %>
+          <%= pie_chart @closets.where(season_id: 1).group(:genre_id).count, legend: false, colors: [ "#cd7693","#eab9c9","#f2d6df"]%>
           <div class="item-count">アイテム数</div>
           <div class="category-count"><span class="color1">●</span><%= "アウター：#{@closets.where(genre_id: 1, season_id: 1).length}" %></div>
           <div class="category-count"><span class="color2">●</span><%= "トップス：#{@closets.where(genre_id: 2, season_id: 1).length}" %></div>
@@ -24,7 +24,7 @@
         </div>
         <div class="panel tab-B">
           <div class="panel-category">カテゴリー</div>
-          <%= pie_chart @closets.where(season_id: 2).group(:genre_id).count, legend: false %>
+          <%= pie_chart @closets.where(season_id: 2).group(:genre_id).count, legend: false, colors: [ "#76cd76","#b9eaba","#d6f2d6"] %>
           <div class="item-count">アイテム数</div>
           <div class="category-count"><span class="color1">●</span><%= "アウター：#{@closets.where(genre_id: 1, season_id: 2).length}" %></div>
           <div class="category-count"><span class="color2">●</span><%= "トップス：#{@closets.where(genre_id: 2, season_id: 2).length}" %></div>
@@ -32,7 +32,7 @@
         </div>
         <div class="panel tab-C">
           <div class="panel-category">カテゴリー</div>
-          <%= pie_chart @closets.where(season_id: 3).group(:genre_id).count, legend: false %>
+          <%= pie_chart @closets.where(season_id: 3).group(:genre_id).count, legend: false, colors: [ "#cd9376","#eac9b9","#f2dfd6"] %>
           <div class="item-count">アイテム数</div>
           <div class="category-count"><span class="color1">●</span><%= "アウター：#{@closets.where(genre_id: 1, season_id: 3).length}" %></div>
           <div class="category-count"><span class="color2">●</span><%= "トップス：#{@closets.where(genre_id: 2, season_id: 3).length}" %></div>
@@ -40,7 +40,7 @@
         </div>
         <div class="panel tab-D">
           <div class="panel-category">カテゴリー</div>
-          <%= pie_chart @closets.where(season_id: 4).group(:genre_id).count, legend: false %>
+          <%= pie_chart @closets.where(season_id: 4).group(:genre_id).count, legend: false, colors: [ "#769fcd","#b9d7ea","#d6e6f2"]%>
           <div class="item-count">アイテム数</div>
           <div class="category-count"><span class="color1">●</span><%= "アウター：#{@closets.where(genre_id: 1, season_id: 4).length}" %></div>
           <div class="category-count"><span class="color2">●</span><%= "トップス：#{@closets.where(genre_id: 2, season_id: 4).length}" %></div>

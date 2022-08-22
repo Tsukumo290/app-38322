@@ -14,10 +14,10 @@
   width: 600px;
 }
 .date {
-  height: 60px;
+  height: 65px;
   border-bottom: 1px solid lightgray;
-  font-size: 21px;
-  line-height: 60px;
+  font-size: 22px;
+  line-height: 65px;
   text-align: center;
   width: 550px;
 }
@@ -48,15 +48,51 @@
   text-align: center;
   font-size: 18px;
 }
-.color1 {
-  color: blue;
+.spring1 {
+  color: #cd7693;
   margin-right:5px;
 }
-.color2 {
-  color: #ff0000;
+.spring2 {
+  color: #eab9c9;
   margin-right:5px;
 }
-.color3 {
-  color: #fd7e00;
+.spring3 {
+  color: #f2d6df;
+  margin-right:5px;
+}
+.summer1 {
+  color: #76cd76;
+  margin-right:5px;
+}
+.summer2 {
+  color: #b9eaba;
+  margin-right:5px;
+}
+.summer3 {
+  color: #d6f2d6;
+  margin-right:5px;
+}
+.autumn1 {
+  color: #cd9376;
+  margin-right:5px;
+}
+.autumn2 {
+  color: #eac9b9;
+  margin-right:5px;
+}
+.autumn3 {
+  color: #f2dfd6;
+  margin-right:5px;
+}
+.winter1 {
+  color: #769fcd;
+  margin-right:5px;
+}
+.winter2 {
+  color: #b9d7ea;
+  margin-right:5px;
+}
+.winter3 {
+  color: #d6e6f2;
   margin-right:5px;
 }

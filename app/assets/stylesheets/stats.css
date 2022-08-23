@@ -115,3 +115,7 @@
 .desc {
   margin-top: 30px;
 }
+.stats-count {
+  line-height: 24px;
+  text-align: center;
+}

@@ -47,13 +47,19 @@
           <div class="favorite-title desc">着用回数が多いアイテム</div>
           <div class="stats-images">
           <% @favorite_desc_spring.each do |closet| %>
+            <div>
             <div class="stats-image"><%= image_tag closet.image %></div>
+            <div class="stats-count"><%= "#{closet.favorites.count}回" %></div>
+            </div>
           <% end %>
           </div>
           <div class="favorite-title">着用回数が少ないアイテム</div>
           <div class="stats-images">
           <% @favorite_asc_spring.each do |closet| %>
+            <div>
             <div class="stats-image"><%= image_tag closet.image %></div>
+            <div class="stats-count"><%= "#{closet.favorites.count}回" %></div>
+            </div>
           <% end %>
           </div>
 
@@ -91,13 +97,19 @@
           <div class="favorite-title desc">着用回数が多いアイテム</div>
           <div class="stats-images">
           <% @favorite_desc_summer.each do |closet| %>
+            <div>
             <div class="stats-image"><%= image_tag closet.image %></div>
+            <div class="stats-count"><%= "#{closet.favorites.count}回" %></div>
+            </div>
           <% end %>
           </div>
           <div class="favorite-title">着用回数が少ないアイテム</div>
           <div class="stats-images">
           <% @favorite_asc_summer.each do |closet| %>
+            <div>
             <div class="stats-image"><%= image_tag closet.image %></div>
+            <div class="stats-count"><%= "#{closet.favorites.count}回" %></div>
+            </div>
           <% end %>
           </div>
 
@@ -135,13 +147,19 @@
           <div class="favorite-title desc">着用回数が多いアイテム</div>
           <div class="stats-images">
             <% @favorite_desc_autumn.each do |closet| %>
+              <div>
               <div class="stats-image"><%= image_tag closet.image %></div>
+              <div class="stats-count"><%= "#{closet.favorites.count}回" %></div>
+              </div>
             <% end %>
           </div>
           <div class="favorite-title">着用回数が少ないアイテム</div>
           <div class="stats-images">
             <% @favorite_asc_autumn.each do |closet| %>
+              <div>
               <div class="stats-image"><%= image_tag closet.image %></div>
+              <div class="stats-count"><%= "#{closet.favorites.count}回" %></div>
+              </div>
             <% end %>
           </div>
         </div>
@@ -178,13 +196,19 @@
           <div class="favorite-title desc">着用回数が多いアイテム</div>
           <div class="stats-images">
           <% @favorite_desc_winter.each do |closet| %>
+            <div>
             <div class="stats-image"><%= image_tag closet.image %></div>
+            <div class="stats-count"><%= "#{closet.favorites.count}回" %></div>
+            </div>
           <% end %>
           </div>
           <div class="favorite-title">着用回数が少ないアイテム</div>
           <div class="stats-images">
           <% @favorite_asc_winter.each do |closet| %>
+            <div>
             <div class="stats-image"><%= image_tag closet.image %></div>
+            <div class="stats-count"><%= "#{closet.favorites.count}回" %></div>
+            </div>
           <% end %>
           </div>
 

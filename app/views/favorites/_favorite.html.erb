@@ -1,0 +1,3 @@
+<%= link_to closet_favorites_path(@closet.id), method: :post, remote: true do %>
+<button>着用</button>：<%= @closet.favorites.count %>
+<% end %>

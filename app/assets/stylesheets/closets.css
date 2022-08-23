@@ -205,6 +205,13 @@
   text-align: left;
   font-size: 17px;
 }
+.favoriteArea {
+  height: 50px;
+  width: 320px;
+  line-height: 50px;
+  text-align: left;
+  font-size: 17px;
+}
 .scroll {
   overflow: scroll;
   white-space:nowrap;

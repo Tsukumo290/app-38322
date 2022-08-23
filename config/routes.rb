@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :users, only: [:edit, :update]
   resources :closets, only: [:index, :new, :create, :show, :destroy] do
     resources :memos, only: [:create, :destroy]
+    resource :favorites, only: [:create]
     collection do
       get 'stats'
     end

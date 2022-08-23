@@ -221,9 +221,13 @@
 
   <div class="stats-right">
     <div class="date"><%= "クローゼット総資産額：¥#{@closets.sum(:price)}"%></div>
-    <div class="date"><%= "アイテム平均価格：¥#{@closets.sum(:price).fdiv(@closets.length).round}"%></div>
+    <div class="date"><%= "アイテム平均価格：¥#{@closets.sum(:price).fdiv(@closets.count).round}"%></div>
     <div class="date"><%= "アイテム最高価格：¥#{@closets.maximum(:price)}"%></div>
-    <div class="date"><%= "所持アイテム数：#{@closets.length}"%></div>
+    <div class="date bottom"><%= "所持アイテム数：#{@closets.length}"%></div>
+    <div class="date"><%= "今月の使用額：¥#{@closets_month.sum(:price)[Date.today.month]}"%></div>
+    
+    <%#<div class="date"><%= "今月のアイテム最高価格：¥#{@closets_month.maximum(:price)[Date.today.month]}"</div>%>
+    <div class="date"><%= "今月の保管アイテム数：#{@closets_month.count[Date.today.month]}"%></div>
   </div>
 
 </div>

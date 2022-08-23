@@ -44,16 +44,16 @@
             </div>
           <% end %>
 
-          <div class="count-desc-title">着用回数が多いアイテム</div>
-          <div class="stats-image">
+          <div class="favorite-title desc">着用回数が多いアイテム</div>
+          <div class="stats-images">
           <% @favorite_desc_spring.each do |closet| %>
-            <%= image_tag closet.image %>
+            <div class="stats-image"><%= image_tag closet.image %></div>
           <% end %>
           </div>
-          <div class="count-asc-title">着用回数が少ないアイテム</div>
-          <div class="stats-image">
+          <div class="favorite-title">着用回数が少ないアイテム</div>
+          <div class="stats-images">
           <% @favorite_asc_spring.each do |closet| %>
-            <%= image_tag closet.image %>
+            <div class="stats-image"><%= image_tag closet.image %></div>
           <% end %>
           </div>
 
@@ -87,6 +87,20 @@
               <%= "ボトムス：#{@closets.where(genre_id: 3, season_id: 2).length}" %>
             </div>
           <% end %>
+
+          <div class="favorite-title desc">着用回数が多いアイテム</div>
+          <div class="stats-images">
+          <% @favorite_desc_summer.each do |closet| %>
+            <div class="stats-image"><%= image_tag closet.image %></div>
+          <% end %>
+          </div>
+          <div class="favorite-title">着用回数が少ないアイテム</div>
+          <div class="stats-images">
+          <% @favorite_asc_summer.each do |closet| %>
+            <div class="stats-image"><%= image_tag closet.image %></div>
+          <% end %>
+          </div>
+
         </div>
         <div class="panel tab-C">
           <div class="panel-category">カテゴリー</div>
@@ -117,6 +131,19 @@
               <%= "ボトムス：#{@closets.where(genre_id: 3, season_id: 3).length}" %>
             </div>
           <% end %>
+
+          <div class="favorite-title desc">着用回数が多いアイテム</div>
+          <div class="stats-images">
+            <% @favorite_desc_autumn.each do |closet| %>
+              <div class="stats-image"><%= image_tag closet.image %></div>
+            <% end %>
+          </div>
+          <div class="favorite-title">着用回数が少ないアイテム</div>
+          <div class="stats-images">
+            <% @favorite_asc_autumn.each do |closet| %>
+              <div class="stats-image"><%= image_tag closet.image %></div>
+            <% end %>
+          </div>
         </div>
         <div class="panel tab-D">
           <div class="panel-category">カテゴリー</div>
@@ -147,6 +174,20 @@
               <%= "ボトムス：#{@closets.where(genre_id: 3, season_id: 4).length}" %>
             </div>
           <% end %>
+
+          <div class="favorite-title desc">着用回数が多いアイテム</div>
+          <div class="stats-images">
+          <% @favorite_desc_winter.each do |closet| %>
+            <div class="stats-image"><%= image_tag closet.image %></div>
+          <% end %>
+          </div>
+          <div class="favorite-title">着用回数が少ないアイテム</div>
+          <div class="stats-images">
+          <% @favorite_asc_winter.each do |closet| %>
+            <div class="stats-image"><%= image_tag closet.image %></div>
+          <% end %>
+          </div>
+
         </div>
       </div>
 

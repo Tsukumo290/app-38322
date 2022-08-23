@@ -96,12 +96,22 @@
   color: #d6e6f2;
   margin-right:5px;
 }
-.stats-image {
+.stats-images {
   display: flex;
   width: 100%;
   overflow: scroll;
 }
 .stats-image img {
-  height: 150px;
-  width: 150px;
+  height: 170px;
+  width: 170px;
+  object-fit: cover;
+}
+.favorite-title {
+  height: 80px;
+  font-size: 19px;
+  line-height: 80px;
+  text-align: center;
+}
+.desc {
+  margin-top: 30px;
 }

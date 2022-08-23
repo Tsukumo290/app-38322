@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_08_16_132323) do
+ActiveRecord::Schema.define(version: 2022_08_23_021459) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -46,6 +46,15 @@ ActiveRecord::Schema.define(version: 2022_08_16_132323) do
     t.index ["user_id"], name: "index_closets_on_user_id"
   end
 
+  create_table "favorites", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "closet_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["closet_id"], name: "index_favorites_on_closet_id"
+    t.index ["user_id"], name: "index_favorites_on_user_id"
+  end
+
   create_table "memos", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "content"
     t.bigint "user_id", null: false
@@ -71,6 +80,8 @@ ActiveRecord::Schema.define(version: 2022_08_16_132323) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "closets", "users"
+  add_foreign_key "favorites", "closets"
+  add_foreign_key "favorites", "users"
   add_foreign_key "memos", "closets"
   add_foreign_key "memos", "users"
 end

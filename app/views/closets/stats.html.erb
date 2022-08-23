@@ -43,6 +43,20 @@
               <%= "ボトムス：#{@closets.where(genre_id: 3, season_id: 1).length}" %>
             </div>
           <% end %>
+
+          <div class="count-desc-title">着用回数が多いアイテム</div>
+          <div class="stats-image">
+          <% @favorite_desc_spring.each do |closet| %>
+            <%= image_tag closet.image %>
+          <% end %>
+          </div>
+          <div class="count-asc-title">着用回数が少ないアイテム</div>
+          <div class="stats-image">
+          <% @favorite_asc_spring.each do |closet| %>
+            <%= image_tag closet.image %>
+          <% end %>
+          </div>
+
         </div>
         <div class="panel tab-B">
           <div class="panel-category">カテゴリー</div>

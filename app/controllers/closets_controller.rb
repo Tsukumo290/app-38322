@@ -35,6 +35,14 @@ class ClosetsController < ApplicationController
 
   def stats
     @closets = Closet.all
+    @favorite_desc_spring = Closet.includes(:favorites).where(season_id: 1).sort {|a,b| b.favorites.size <=> a.favorites.size}.first(10)
+    @favorite_asc_spring = Closet.includes(:favorites).where(season_id: 1).sort {|a,b| a.favorites.size <=> b.favorites.size}.first(10)
+    @favorite_desc_summer = Closet.includes(:favorites).where(season_id: 2).sort {|a,b| b.favorites.size <=> a.favorites.size}.first(10)
+    @favorite_asc_summer = Closet.includes(:favorites).where(season_id: 2).sort {|a,b| a.favorites.size <=> b.favorites.size}.first(10)
+    @favorite_desc_autumn = Closet.includes(:favorites).where(season_id: 3).sort {|a,b| b.favorites.size <=> a.favorites.size}.first(10)
+    @favorite_asc_autumn = Closet.includes(:favorites).where(season_id: 3).sort {|a,b| a.favorites.size <=> b.favorites.size}.first(10)
+    @favorite_desc_winter = Closet.includes(:favorites).where(season_id: 4).sort {|a,b| b.favorites.size <=> a.favorites.size}.first(10)
+    @favorite_asc_winter = Closet.includes(:favorites).where(season_id: 4).sort {|a,b| a.favorites.size <=> b.favorites.size}.first(10)
   end
 
   private

@@ -6,6 +6,7 @@ class User < ApplicationRecord
   
   has_many :closets, dependent: :destroy
   has_many :memos, dependent: :destroy
+  has_many :favorites, dependent: :destroy
 
   validates :name, presence: true, length: { maximum: 20 }
 

@@ -8,6 +8,7 @@
 
 ### association
 - has_many :closets
+- has_many :memos
 
 
 ## closetsテーブル
@@ -24,3 +25,16 @@
 
 ### association
 - belongs_to :user
+- has_many :memos
+
+
+## memosテーブル
+| Column   | Type       | Options                        |
+| -------- | ---------- | ------------------------------ |
+|content   | string     | null: false                    |
+|user_id   | references | null: false, foreign_key: true |
+|closet_id | references | null: false, foreign_key: true |
+
+### association
+- belongs_to :user
+- belongs_to :closet

@@ -230,9 +230,13 @@
 .favoriteArea {
   height: 50px;
   width: 320px;
+  border-bottom: 1px solid lightgray;
   line-height: 50px;
   text-align: left;
   font-size: 17px;
+}
+.favoriteArea a {
+  color: #ff7c5c;
 }
 .scroll {
   overflow: scroll;
@@ -273,6 +277,7 @@
   height: 50px;
   width: 50px;
   display: block;
+  cursor: pointer;
 }
 .memo-form-display {
   display: flex;
@@ -280,7 +285,11 @@
 .memo button {
   background-color: white;
   cursor: pointer;
-  border: 1px solid gray;
+  border: 1px solid #fff;
+  color: white;
+}
+.memo button:hover {
+  color: black;
 }
 .memo {
   margin-bottom: 5px;

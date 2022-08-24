@@ -38,3 +38,14 @@
 ### association
 - belongs_to :user
 - belongs_to :closet
+
+
+## favoritesテーブル
+| Column   | Type       | Options                        |
+| -------- | ---------- | ------------------------------ |
+|user_id   | references | null: false, foreign_key: true |
+|closet_id | references | null: false, foreign_key: true |
+
+### association
+- belongs_to :user
+- belongs_to :closet

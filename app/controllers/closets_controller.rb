@@ -23,6 +23,7 @@ class ClosetsController < ApplicationController
     if @closet.save
       redirect_to root_path
     else
+      flash.now[:alert] = '項目を入力してください'
       render :new
     end
   end

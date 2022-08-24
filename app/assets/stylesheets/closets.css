@@ -98,6 +98,15 @@
 }
 /* post-formページのcss */
 
+.alert {
+  font-size: 18px;
+  color: #fff;
+  height: 50px;
+  width: 100%;
+  line-height: 50px;
+  text-align: center;
+  background-color: #ff7c5c;
+}
 .clothes-form-content {
   height: 750px;
   width: 750px;
@@ -119,7 +128,7 @@
 }
 .clothes-form {
   width: 650px;
-  margin: 193px auto;
+  margin: 143px auto;
   display: flex;
 }
 .clothes-category input {
@@ -137,6 +146,18 @@
 .closet-submit input {
   width: 320px;
   height: 45px;
+  cursor: pointer;
+  background: #f7f7f7;
+  border-left: solid 6px #ff7c5c;/*左線*/
+  border-top: solid 1px gray;
+  border-right: solid 1px gray;
+  border-bottom: solid 1px gray;
+  color: #ff7c5c;/*文字色*/
+  font-weight: bold;
+  border-radius: 3px;
+}
+#preview-none img {
+  opacity: 0.8;
 }
 
 /*モーダルウィンドウのcss*/
@@ -181,6 +202,7 @@
   width: 750px;
   background-color: white;
   padding: 22.5px 45px 0;
+  border-radius: 2px;
 }
 .show-menu {
   display: flex;

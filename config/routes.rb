@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     resource :favorites, only: [:create]
     collection do
       get 'stats'
+      get 'calender'
     end
   end
 end

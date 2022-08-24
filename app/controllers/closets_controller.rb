@@ -47,6 +47,10 @@ class ClosetsController < ApplicationController
     @favorite_asc_winter = Closet.includes(:favorites).where(season_id: 4).sort {|a,b| a.favorites.size <=> b.favorites.size}.first(10)
   end
 
+  def calender
+
+  end
+
   private
   def closet_params
     params.require(:closet).permit(:brand, :price, :image, :genre_id, :color_id, :season_id, :size_id).merge(user_id: current_user.id)

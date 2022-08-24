@@ -47,7 +47,7 @@ class ClosetsController < ApplicationController
     @favorite_asc_winter = Closet.includes(:favorites).where(season_id: 4).sort {|a,b| a.favorites.size <=> b.favorites.size}.first(10)
   end
 
-  def calender
+  def calendar
 
   end
 

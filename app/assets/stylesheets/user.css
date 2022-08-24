@@ -27,7 +27,7 @@
   border-radius: 20px;
   border: none;
   color: white;
-  background-color: orange;
+  background-color: rgb(251, 130, 24);
   cursor: pointer;
 }
 .others-sign-in {
@@ -43,11 +43,11 @@
   border-radius: 20px;
 }
 .m {
-  border: 1px solid orange;
+  border: 1px solid rgb(251, 130, 24);
   margin-bottom: 20px;
 }
 .m a {
-  color: orange;
+  color: rgb(251, 130, 24);
 }
 .t {
   border: 1px solid #00acee;

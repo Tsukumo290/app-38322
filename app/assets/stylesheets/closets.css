@@ -255,6 +255,7 @@
 #memo-display {
   height: 575px;
   width: 100%;
+  font-size: 17px;
   overflow: scroll;
   -ms-overflow-style: none;    /* IE, Edge 対応 */
   scrollbar-width: none;       /* Firefox 対応 */

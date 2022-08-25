@@ -10,7 +10,7 @@
       <div class="show-image"><%= image_tag @closet.image %></div>
       <div class="show-category scroll"><%= "ブランド：#{@closet.brand}" %></div>
       <div class="show-category"><%= "サイズ：#{@closet.size.name}" %></div>
-
+      <div class="show-category"><%= "カラー：#{@closet.color.name}" %></div>
       <div class="show-category"><%= "購入金額：#{@closet.price}" %></div>
       <div class="show-category"><%= "保管日：#{@closet.created_at.strftime('%Y/%m/%d')}" %></div>
       <div id="favorite_area_<%= @closet.id %>", class="favoriteArea">

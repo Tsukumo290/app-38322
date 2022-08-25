@@ -207,7 +207,7 @@
 .show-menu {
   display: flex;
   justify-content: right;
-  height: 67.5px;
+  height: 44px;
 }
 .show-contents {
   display: flex;
@@ -236,7 +236,7 @@
   font-size: 17px;
 }
 .favoriteArea a {
-  color: #ff7c5c;
+  color: #e25532;
 }
 .scroll {
   overflow: scroll;
@@ -253,7 +253,7 @@
   margin-left: 20px;
 }
 #memo-display {
-  height: 525px;
+  height: 575px;
   width: 100%;
   overflow: scroll;
   -ms-overflow-style: none;    /* IE, Edge 対応 */

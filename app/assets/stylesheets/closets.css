@@ -235,9 +235,9 @@
   text-align: left;
   font-size: 17px;
 }
-.favoriteArea a {
+/*.favoriteArea a {
   color: #e25532;
-}
+}*/
 .scroll {
   overflow: scroll;
   white-space:nowrap;

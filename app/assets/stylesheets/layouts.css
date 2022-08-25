@@ -15,11 +15,7 @@
 .header-title a {
   font-size: 24px;
 }
-.header-right {
-  display: flex;
-  justify-content: space-between;
-  width: 180px;
-} 
+
 .header-right img {
   height: 30px;
   width: 30px;

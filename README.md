@@ -1,3 +1,6 @@
+# ER図
+![Closet_ER](https://user-images.githubusercontent.com/109210394/186546843-996fcd79-f0f6-4432-9ff6-727df99a2480.png)
+
 ## usersテーブル
 
 | Column            | Type   | Options                   |

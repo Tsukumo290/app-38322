@@ -1,10 +1,26 @@
-<div class="calender-contents">
+<div class="calendar-contents">
 
   <div class="calendar-title">コーディネート</div>
-  <%= week_calendar(number_of_weeks: 1) do |date| %>
+
+  <div class="calendar-new">
+  <%= render partial: "new", locals: { calendar: @calendar }%>
+  </div>
+
+  <%= week_calendar events: @calendars do |date, calendars| %>
     <div class="date-area">
-    <%= date %>
-    
+      <%= date %>
+
+      <% @calendars.each do |calendar| %>
+      <%= image_tag calendar.image[0], class: "main-image" %><br>
+      <div class="other-images">
+        <% calendar.image[1..-1].each do |image| %>
+          <div class="other-image">
+            <%= image_tag image %>
+          </div>
+        <%end%>
+      </div>
+      <% end %>
+        
     </div>
   <% end %>
 

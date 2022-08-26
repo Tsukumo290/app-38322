@@ -1,5 +1,6 @@
 class CalendarsController < ApplicationController
   def index
+    @calendars = Calendar.all
   end
 
   def new
@@ -11,12 +12,12 @@ class CalendarsController < ApplicationController
     if @calendar.save
       redirect_to calendars_path
     else
-      render :new
+      redirect_to calendars_path
     end
   end
 
   private
   def calendar_params
-    params.require(:calendar).permit(image: []).merge(user_id: current_user.id)
+    params.permit(:start_time, {image: []}).merge(user_id: current_user.id)
   end
 end

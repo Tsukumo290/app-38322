@@ -4,11 +4,23 @@
   line-height: 100px;
   text-align: center;
 }
-.calender-contents {
+.calendar-contents {
   width: 900px;
   height: 100%;
   margin: 0 auto 100px;
 }
 .date-area {
   height: 600px;
+}
+.calendar-new {
+  height: 200px;
+  background-color: #fff;
+}
+.main-image {
+  height: 100px;
+  width: 100px;
+}
+.other-image img {
+  height: 100px;
+  width: 100px;
 }

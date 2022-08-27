@@ -127,3 +127,7 @@
 .bottom {
   margin-bottom: 65px;
 }
+
+.stats-footer {
+  height: 30px;
+}

@@ -8,9 +8,9 @@
 
   <%= week_calendar events: @calendars do |date, calendars| %>
     <div class="date-area">
-      <%= date %>
+      <div class="calendar-date"><%= date %></div>
 
-      <% @calendars.each do |calendar| %>
+      <% calendars.each do |calendar| %>
       <%= image_tag calendar.image[0], class: "main-image" %><br>
       <div class="other-images">
         <% calendar.image[1..-1].each do |image| %>
@@ -23,5 +23,7 @@
         
     </div>
   <% end %>
+
+  <div class="page-footer"></div>
 
 </div>

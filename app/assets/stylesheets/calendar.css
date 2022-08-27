@@ -7,20 +7,33 @@
 .calendar-contents {
   width: 900px;
   height: 100%;
-  margin: 0 auto 100px;
+  margin: 0 auto;
 }
 .date-area {
-  height: 600px;
+  height: 750px;
+  margin: 0 auto;
+  overflow: hidden;
 }
 .calendar-new {
   height: 200px;
   background-color: #fff;
 }
 .main-image {
-  height: 100px;
-  width: 100px;
+  height: 115px;
+  width: 115px;
+  object-fit: cover;
 }
 .other-image img {
-  height: 100px;
-  width: 100px;
+  height: 115px;
+  width: 115px;
+  object-fit: cover;
+}
+.calendar-date {
+  width: 115px;
+  height: 37.5px;
+  line-height: 37.5px;
+  text-align: center;
+}
+.page-footer {
+  height: 50px;
 }

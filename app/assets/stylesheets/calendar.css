@@ -37,3 +37,29 @@
 .page-footer {
   height: 50px;
 }
+.table th {
+  text-align: center;
+}
+.table thead {
+  background-color: #fff;
+}
+.table tbody {
+  background-color: #fff;
+}
+.calendar-time select {
+  height: 30px;
+}
+.calendar-time {
+  margin-bottom: 5px;
+}
+.calendar-submit input {
+  height: 30px;
+  width: 111px;
+  margin-top: 5px;
+}
+#_start_time_1i {
+  width: 70px;
+}
+#_start_time_3i {
+  width: 50px;
+}

@@ -98,7 +98,7 @@
 }
 /* post-formページのcss */
 
-.alert {
+/*.alert {
   font-size: 18px;
   color: #fff;
   height: 50px;
@@ -106,6 +106,19 @@
   line-height: 50px;
   text-align: center;
   background-color: #ff7c5c;
+}*/
+.notifications {
+  font-size: 18px;
+  color: #fff;
+  height: 50px;
+  width: 100%;
+  line-height: 50px;
+  text-align: center;
+}
+
+.alert {
+  background-color: #ff7c5c;
+
 }
 
 .clothes-form-content {
@@ -158,7 +171,7 @@
   border-radius: 3px;
 }
 #preview-none img {
-  opacity: 0.8;
+  opacity: 0.7;
 }
 
 /*モーダルウィンドウのcss*/

@@ -14,10 +14,6 @@
   margin: 0 auto;
   overflow: hidden;
 }
-.calendar-new {
-  height: 200px;
-  background-color: #fff;
-}
 .main-image {
   height: 115px;
   width: 115px;
@@ -39,6 +35,7 @@
 }
 .table th {
   text-align: center;
+  height: 50px;
 }
 .table thead {
   background-color: #fff;

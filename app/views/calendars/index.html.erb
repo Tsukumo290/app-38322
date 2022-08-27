@@ -8,7 +8,7 @@
 
   <%= week_calendar events: @calendars do |date, calendars| %>
     <div class="date-area">
-      <div class="calendar-date"><%= date %></div>
+      <div class="calendar-date"><%= "#{date.month}/#{date.day}" %></div>
 
       <% calendars.each do |calendar| %>
       <%= image_tag calendar.image[0], class: "main-image" %><br>

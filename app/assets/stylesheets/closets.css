@@ -98,15 +98,7 @@
 }
 /* post-formページのcss */
 
-/*.alert {
-  font-size: 18px;
-  color: #fff;
-  height: 50px;
-  width: 100%;
-  line-height: 50px;
-  text-align: center;
-  background-color: #ff7c5c;
-}*/
+
 .notifications {
   font-size: 18px;
   color: #fff;
@@ -118,7 +110,6 @@
 
 .alert {
   background-color: #ff7c5c;
-
 }
 
 .clothes-form-content {
@@ -161,13 +152,7 @@
   width: 320px;
   height: 45px;
   cursor: pointer;
-  background: #f7f7f7;
-  border-left: solid 6px #ff7c5c;/*左線*/
-  border-top: solid 1px gray;
-  border-right: solid 1px gray;
-  border-bottom: solid 1px gray;
-  color: #ff7c5c;/*文字色*/
-  font-weight: bold;
+  border: 1px solid gray;
   border-radius: 3px;
 }
 #preview-none img {

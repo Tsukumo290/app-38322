@@ -64,3 +64,4 @@ gem 'active_hash'
 gem "chartkick"
 gem 'chartable'
 gem 'simple_calendar', '~> 2.0'
+gem 'jp_prefecture'

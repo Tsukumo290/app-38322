@@ -52,3 +52,12 @@
 ### association
 - belongs_to :user
 - belongs_to :closet
+
+## calendarsテーブル
+| Column    | Type       | Options                        |
+| --------- | ---------- | ------------------------------ |
+|start_time | datetime   | null: false                    |
+|user_id    | references | null: false, foreign_key: true |
+
+### association
+- belongs_to :user

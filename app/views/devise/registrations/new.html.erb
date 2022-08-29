@@ -15,6 +15,9 @@
       <div class='user-form-input'>
         <%= f.password_field :password_confirmation, placeholder: "パスワードの再入力", autocomplete: "off"%>
       </div>
+      <div class='user-form-select'>
+        <%= f.collection_select :prefecture_code, JpPrefecture::Prefecture.all, :code, :name %>
+      </div>
       <div class='user-form-btn new'>
         <%= f.submit "新規登録" %>
       </div>

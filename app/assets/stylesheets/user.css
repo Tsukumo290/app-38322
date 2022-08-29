@@ -78,3 +78,9 @@
 .o a {
   color: gray;
 }
+.user-form-select select{
+  height: 50px;
+  width: 100%;
+  padding-left: 10px;
+  margin-bottom: 20px;
+}

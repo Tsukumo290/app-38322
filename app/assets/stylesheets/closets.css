@@ -282,15 +282,6 @@
 .memo-form-display {
   display: flex;
 }
-.memo button {
-  background-color: white;
-  cursor: pointer;
-  border: 1px solid #fff;
-  color: white;
-}
-.memo button:hover {
-  color: black;
-}
 .memo {
   margin-bottom: 5px;
 }

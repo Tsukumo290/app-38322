@@ -12,5 +12,5 @@ Rails.application.routes.draw do
       get 'stats'
     end
   end
-  resources :calendars, only: [:index, :new, :create, :destroy ]
+  resources :calendars, only: [:index, :new, :create, :destroy]
 end

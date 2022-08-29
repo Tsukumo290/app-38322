@@ -15,7 +15,16 @@
 .header-title a {
   font-size: 24px;
 }
-
+.header-right {
+  display: flex;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  font-size: 18px;
+}
+.nickname {
+  margin-right: 10px;
+}
 .header-right img {
   height: 30px;
   width: 30px;

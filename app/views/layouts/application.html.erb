@@ -13,7 +13,10 @@
     <div class="header-menu">
       <div class="header-title"><%= link_to "タイトル", root_path %></div>
 
-      <div class="header-right"><%= link_to image_tag("user.png"), edit_user_path(current_user) %></div>
+      <div class="header-right">
+      <div class="nickname"><%= current_user.name %></div>
+      <div><%= link_to image_tag("user.png"), edit_user_path(current_user) %></div>
+      </div>
     </div>
     <% end %>
   </header>
@@ -26,11 +29,13 @@
 
   <footer class="footer">
     <% if user_signed_in? %>
-    <div class="footer-menu">
-      <div><%= link_to image_tag("closet.png"), root_path %></div>
-      <div><%= link_to image_tag("clothes.png"), new_closet_path %></div>
-      <div><%= link_to image_tag("memo.png"), calendars_path %></div>
-      <div><%= link_to image_tag("graph.png"), stats_closets_path %></div>
+    <div class="foote-menus">
+      <div class="footer-menu">
+        <div><%= link_to image_tag("closet.png"), root_path %></div>
+        <div><%= link_to image_tag("clothes.png"), new_closet_path %></div>
+        <div><%= link_to image_tag("memo.png"), calendars_path %></div>
+        <div><%= link_to image_tag("graph.png"), stats_closets_path %></div>
+      </div>
     </div>
     <% end %>
   </footer>

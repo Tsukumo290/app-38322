@@ -8,6 +8,9 @@
       <div class='user-form-input'>
         <%= f.email_field :email, placeholder: "メールアドレス"%>
       </div>
+      <div class='user-form-select'>
+        <%= f.collection_select :prefecture_code, JpPrefecture::Prefecture.all, :code, :name %>
+      </div>
       <div class='user-form-btn new'>
         <%= f.submit "更新する" %>
       </div>

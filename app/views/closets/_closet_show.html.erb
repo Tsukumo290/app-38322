@@ -1,7 +1,7 @@
 <div class="show">
 
   <div class="show-menu">
-    <div class="show-delete"><%= link_to "削除", closet_path(@closet.id), method: :delete %></div>
+    <div class="show-delete"><%= link_to "削除", closet_path(@closet.id), method: :delete, data: { confirm: "削除しますか？" } %></div>
   </div>
 
   <div class="show-contents">

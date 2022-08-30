@@ -131,3 +131,8 @@
 .stats-footer {
   height: 30px;
 }
+
+/* スマホ */
+@media (max-width: 599px) {
+  
+}

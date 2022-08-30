@@ -304,19 +304,15 @@
     height: 25px;
   }
   .panel{
-    display:none;
     height: 470px;
   }
   .clothes-genre {
     height: 45px;
-    width: 100%;
     line-height: 45px;
-    text-align: center;
     font-size: 14px;
   }
 
   .genre-images {
-    display: flex;
     height: 106px;
     padding-right: 4px;
   }
@@ -324,63 +320,87 @@
   /* post-formページのcss */
   
   .notifications {
-    font-size: 18px;
-    color: #fff;
-    height: 50px;
-    width: 100%;
-    line-height: 50px;
-    text-align: center;
+    font-size: 12px;
+    height: 24px;
+    line-height: 24px;
   }
-  
-  .alert {
-    background-color: #ff7c5c;
-  }
-  
   .clothes-form-content {
-    height: 750px;
-    width: 750px;
-    background-color: white;
-    border: 1px solid lightgray;
-    margin: 0 auto;
-    margin-top: 37px;
+    height: 590px;
+    width: calc(100% - 15%);
+    margin-top: 30px;
+    margin-bottom: 30px;
   }
-  .image-preview img {
-    height: 320px;
-    width: 320px;
-    object-fit: cover;
+  .image-preview {
+    width: calc(100% - 30px);
+    margin: 0 auto;
+  }
+  #preview-none {
+    width: 200px;
+    margin: 20px auto 10px;
+  }
+  .preview {
+    width: 200px;
+    margin: 20px auto 10px;
   }
   .image-form {
-    margin-bottom: 6.5px;
+    width: calc(100% - 30px);
+    margin: 0 auto;
   }
+  .image-form input {
+    width: 100%;
+    height: 100%;
+  }
+  .image-preview img {
+    height: 200px;
+    width: 200px;
+    margin: 0 auto;
+  }
+  .image-form {
+    margin-bottom: 10px;
+  }
+
   .form-right {
-    margin-left: 6.5px;
+    width: calc(100% - 50px);
+    margin: 0 auto;
   }
   .clothes-form {
-    width: 650px;
-    margin: 143px auto;
-    display: flex;
+    width: calc(100% - 30px);
+    margin: 0 auto;
+    display: block;
+  }
+  .clothes-category {
+    width: 100%;
+    margin: 0 auto;
   }
   .clothes-category input {
-    width: 320px;
-    height: 45px;
-    margin-bottom: 6.5px;
+    font-size: 14px;
+    margin: 0 auto;
+    width: 100%;
+    height: 35px;
+    margin-bottom: 2px;
     padding-left: 10px;
+    border-left:white;
+    border-top: white;
+    border-right: white;
+    border-bottom: 1px solid lightgray;
   }
+
+
   .select-box {
-    width: 320px;
-    height: 45px;
-    margin-bottom: 6.5px;
-    padding-left: 10px;
+    font-size: 14px;
+    width: 100%;
+    height: 35px;
+    margin-bottom: 2px;
+    padding-left: 2px;
+    border-left:white;
+    border-top: white;
+    border-right: white;
+    border-bottom: 1px solid lightgray;
   }
   .closet-submit input {
-    width: 320px;
-    height: 45px;
-    cursor: pointer;
+    width: 100%;
+    height: 35px;
     border: 1px solid gray;
-    border-radius: 3px;
-  }
-  #preview-none img {
-    opacity: 0.7;
   }
   
   /*モーダルウィンドウのcss*/

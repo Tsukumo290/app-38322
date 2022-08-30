@@ -84,3 +84,90 @@
   padding-left: 10px;
   margin-bottom: 20px;
 }
+
+/* スマホ */
+@media (max-width: 599px) {
+
+  .user-form-content {
+    height: 100%;
+    width: calc(100% - 15%);
+    margin: 30px auto;
+  }
+  .user-form-title {
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    font-size: 16px;
+  }
+  .user-form {
+    width: calc(100% - 30%);
+    margin: 0 auto;
+  }
+  .user-form-input input {
+    height: 42px;
+    width: 100%;
+    padding-left: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+  .user-form-btn input {
+    height: 38px;
+    width: 100%;
+    border-radius: 19px;
+    border: none;
+    color: white;
+    background-color: #ff7c5c;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  .others-sign-in {
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    font-size: 14px;
+  }
+  .sign-in {
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    width: 100%;
+    border-radius: 19px;
+    font-size: 14px;
+  }
+  .m {
+    border: 1px solid #ff7c5c;
+    margin-bottom: 10px;
+  }
+  .g {
+    background-color: gray;
+    margin-bottom: 10px;
+  }
+  .g a {
+    color: white;
+  }
+  .others-account {
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    font-size: 14px;
+  }
+  
+  .new {
+    margin-bottom: 10px;
+  }
+  
+  .o {
+    border: 1px solid gray;
+  }
+  .o a {
+    color: gray;
+  }
+  .user-form-select select{
+    height: 40px;
+    width: 100%;
+    padding-left: 10px;
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+  
+}

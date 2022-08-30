@@ -419,8 +419,8 @@
     overflow: scroll;
   }
   .show-menu {
-    height: 20px;
-    font-size: 14px;
+    height: 18px;
+    font-size: 12px;
     margin-bottom: 10px;
   }
   .show-contents {
@@ -441,7 +441,7 @@
     height: 40px;
     width: 100%;
     line-height: 40px;
-    font-size: 16px;
+    font-size: 15px;
   }
   .favoriteArea {
     height: 40px;
@@ -450,14 +450,14 @@
     font-size: 15px;
   }
   .show-right {
-    height: 100%;
+    height: 350px;
     width: 100%;
     margin-left: 0px;
     padding: 0 20px;
   }
 
   #memo-display {
-    height: 100%;
+    height: 300px;
     width: 100%;
     font-size: 15px;
     padding-top: 50px;

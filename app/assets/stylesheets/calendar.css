@@ -64,5 +64,72 @@
 
 /* スマホ */
 @media (max-width: 599px) {
-  
+  .calendar-title {
+    height: 60px;
+    font-size: 19px;
+    line-height: 60px;
+    text-align: center;
+  }
+  .calendar-contents {
+    width: calc(100vw - 15%);
+    height: 100%;
+    margin: 0 auto;
+  }
+  .calendar-week {
+    width: 100%;
+  }
+  .simple-calendar {
+    overflow: scroll;
+    -ms-overflow-style: none;    /* IE, Edge 対応 */
+    scrollbar-width: none;       /* Firefox 対応 */
+  }
+  .simple-calendar::-webkit-scrollbar {  /* Chrome, Safari 対応 */
+    display:none;
+  }
+  .date-area {
+    height: 630px;
+  }
+  .main-image {
+    height: 93px;
+    width: 93px;
+    object-fit: cover;
+  }
+  .other-image img {
+    height: 93px;
+    width: 93px;
+    object-fit: cover;
+  }
+  .calendar-date {
+    width: 93px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+  }
+  .simple-calendar td {
+    padding: 0 6px;
+  } 
+  .table th {
+    text-align: center;
+    height: 35px;
+  }
+  .calendar-time select {
+    height: 30px;
+  }
+  .calendar-time {
+    margin-bottom: 5px;
+  }
+  .calendar-file {
+    font-size: 15px;
+  }
+  .calendar-submit input {
+    height: 28px;
+    width: 105px;
+    margin-top: 5px;
+  }
+  #_start_time_1i {
+    width: 70px;
+  }
+  #_start_time_3i {
+    width: 50px;
+  }
 }

@@ -71,20 +71,11 @@
 .clothes-genre {
   height: 100px;
   width: 100%;
-
-}
-.genre-menu {
-  display: flex;
-  justify-content: space-between;
-  margin: 0 auto;
-  width: 750px;
   line-height: 100px;
   text-align: center;
-  padding-left: 333px;
+  font-size: 22px;
 }
-.genre-title {
-   font-size: 22px;
-}
+
 .genre-images {
   display: flex;
   height: 280px;
@@ -284,4 +275,220 @@
 }
 .memo {
   margin-bottom: 5px;
+}
+
+/* スマホ */
+@media (max-width: 599px) {
+
+  .tab{
+    font-size: 12px;
+    height: 30px;
+    line-height: 30px;
+  }
+  .panel-group img {
+    height: 95px;
+    width: 95px;
+    margin-left: 8px;
+  }
+  .closet-contents {
+    width: calc(100vw - 15%);
+  }
+  .closet-header {
+    height: 60px;
+  }
+  .closet-header-title {
+    line-height: 60px;
+    font-size: 18px;
+  }
+  .page-footer {
+    height: 25px;
+  }
+  .panel{
+    display:none;
+    height: 470px;
+  }
+  .clothes-genre {
+    height: 45px;
+    width: 100%;
+    line-height: 45px;
+    text-align: center;
+    font-size: 14px;
+  }
+
+  .genre-images {
+    display: flex;
+    height: 106px;
+    padding-right: 4px;
+  }
+
+  /* post-formページのcss */
+  
+  .notifications {
+    font-size: 18px;
+    color: #fff;
+    height: 50px;
+    width: 100%;
+    line-height: 50px;
+    text-align: center;
+  }
+  
+  .alert {
+    background-color: #ff7c5c;
+  }
+  
+  .clothes-form-content {
+    height: 750px;
+    width: 750px;
+    background-color: white;
+    border: 1px solid lightgray;
+    margin: 0 auto;
+    margin-top: 37px;
+  }
+  .image-preview img {
+    height: 320px;
+    width: 320px;
+    object-fit: cover;
+  }
+  .image-form {
+    margin-bottom: 6.5px;
+  }
+  .form-right {
+    margin-left: 6.5px;
+  }
+  .clothes-form {
+    width: 650px;
+    margin: 143px auto;
+    display: flex;
+  }
+  .clothes-category input {
+    width: 320px;
+    height: 45px;
+    margin-bottom: 6.5px;
+    padding-left: 10px;
+  }
+  .select-box {
+    width: 320px;
+    height: 45px;
+    margin-bottom: 6.5px;
+    padding-left: 10px;
+  }
+  .closet-submit input {
+    width: 320px;
+    height: 45px;
+    cursor: pointer;
+    border: 1px solid gray;
+    border-radius: 3px;
+  }
+  #preview-none img {
+    opacity: 0.7;
+  }
+  
+  /*モーダルウィンドウのcss*/
+  
+  #mask {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+  }
+  
+  #modal {
+    position: fixed;
+    top: 10vh;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    transform: translate(0, 0) scale(1);
+    transition: 0.2s;
+    z-index: 2;
+    width: 750px;
+  }
+  
+  #mask.hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  #modal.hidden {
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(0, 0) scale(0.8);
+  }
+  
+  /* show画面のcss */
+  
+  .show {
+    height: 750px;
+    width: 750px;
+    background-color: white;
+    padding: 22.5px 45px 0;
+    border-radius: 2px;
+  }
+  .show-menu {
+    display: flex;
+    justify-content: right;
+    height: 44px;
+  }
+  .show-contents {
+    display: flex;
+    height: 100%;
+    width: 100%;
+  }
+  .show-image img {
+    height: 320px;
+    width: 320px;
+    object-fit: cover;
+  }
+  .show-category {
+    height: 50px;
+    border-bottom: 1px solid lightgray;
+    width: 320px;
+    line-height: 50px;
+    text-align: left;
+    font-size: 17px;
+  }
+  .favoriteArea {
+    height: 50px;
+    width: 320px;
+    border-bottom: 1px solid lightgray;
+    line-height: 50px;
+    text-align: left;
+    font-size: 17px;
+  }
+  .show-right {
+    height: 520px;
+    width: 320px;
+    margin-left: 20px;
+  }
+  #memo-display {
+    height: 575px;
+    width: 100%;
+    font-size: 17px;
+  }
+  .memo-form {
+    height: 50px;
+  }
+  .memo-content input {
+    height: 50px;
+    display: block;
+  }
+  .memo-content {
+    width: 270px;
+    padding-left: 10px;
+  }
+  .memo-form-submit {
+    height: 50px;
+    width: 50px;
+    display: block;
+    cursor: pointer;
+  }
+  .memo-form-display {
+    display: flex;
+  }
+  .memo {
+    margin-bottom: 5px;
+  }
 }

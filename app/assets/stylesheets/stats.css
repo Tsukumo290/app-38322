@@ -138,9 +138,15 @@
 }
 .panel-height {
   height: 1210px;
+  position: relative;
 }
 .date span {
   color: #cc5a80;
+}
+.under {
+  position: absolute;
+  width: 100%;
+  bottom: 45px;
 }
 
 /* スマホ */
@@ -217,12 +223,14 @@
   .stats-images {
     padding: 0 8px 0 0;
   }
-
+  .under {
+    bottom: 40px;
+  }
   .date {
     height: 40px;
     width: 100%;
     border-bottom: 1px solid lightgray;
-    font-size: 15px;
+    font-size: 14px;
     line-height: 40px;
     text-align: center;
   }

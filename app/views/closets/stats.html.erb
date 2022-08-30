@@ -44,26 +44,28 @@
               <% end %>
             </div>
           </div>
-          <% if @closets.where(user_id: current_user.id).nil? %>
-            <div class="favorite-title desc">着用回数が多いアイテム</div>
-            <div class="stats-images">
-              <% @favorite_desc_spring.each do |closet| %>
-                <div>
-                <div class="stats-image"><%= image_tag closet.image %></div>
-                <div class="stats-count"><%= "#{closet.favorites.count}回" %></div>
-                </div>
-              <% end %>
-            </div>
-            <div class="favorite-title">着用回数が少ないアイテム</div>
-            <div class="stats-images">
-              <% @favorite_asc_spring.each do |closet| %>
-                <div>
-                <div class="stats-image"><%= image_tag closet.image %></div>
-                <div class="stats-count"><%= "#{closet.favorites.count}回" %></div>
-                </div>
-              <% end %>
-            </div>
-          <% end %>
+          <div class="under">
+            <% if @favorite_desc_spring.present? %>
+              <div class="favorite-title desc">着用回数が多いアイテム</div>
+              <div class="stats-images">
+                <% @favorite_desc_spring.each do |closet| %>
+                  <div>
+                  <div class="stats-image"><%= image_tag closet.image %></div>
+                  <div class="stats-count"><%= "#{closet.favorites.count}回" %></div>
+                  </div>
+                <% end %>
+              </div>
+              <div class="favorite-title">着用回数が少ないアイテム</div>
+              <div class="stats-images">
+                <% @favorite_asc_spring.each do |closet| %>
+                  <div>
+                  <div class="stats-image"><%= image_tag closet.image %></div>
+                  <div class="stats-count"><%= "#{closet.favorites.count}回" %></div>
+                  </div>
+                <% end %>
+              </div>
+            <% end %>
+          </div>
         </div>
         <div class="panel tab-B">
 
@@ -99,26 +101,28 @@
               <% end %>
             </div>
           </div>
-          <% if @closets.where(user_id: current_user.id).nil? %>
-            <div class="favorite-title desc">着用回数が多いアイテム</div>
-            <div class="stats-images">
-            <% @favorite_desc_summer.each do |closet| %>
-              <div>
-              <div class="stats-image"><%= image_tag closet.image %></div>
-              <div class="stats-count"><%= "#{closet.favorites.count}回" %></div>
+          <div class="under">
+            <% if @favorite_desc_summer.present? %>
+              <div class="favorite-title desc">着用回数が多いアイテム</div>
+              <div class="stats-images">
+              <% @favorite_desc_summer.each do |closet| %>
+                <div>
+                <div class="stats-image"><%= image_tag closet.image %></div>
+                <div class="stats-count"><%= "#{closet.favorites.count}回" %></div>
+                </div>
+              <% end %>
+              </div>
+              <div class="favorite-title">着用回数が少ないアイテム</div>
+              <div class="stats-images">
+              <% @favorite_asc_summer.each do |closet| %>
+                <div>
+                <div class="stats-image"><%= image_tag closet.image %></div>
+                <div class="stats-count"><%= "#{closet.favorites.count}回" %></div>
+                </div>
+              <% end %>
               </div>
             <% end %>
-            </div>
-            <div class="favorite-title">着用回数が少ないアイテム</div>
-            <div class="stats-images">
-            <% @favorite_asc_summer.each do |closet| %>
-              <div>
-              <div class="stats-image"><%= image_tag closet.image %></div>
-              <div class="stats-count"><%= "#{closet.favorites.count}回" %></div>
-              </div>
-            <% end %>
-            </div>
-          <% end %>
+          </div>
         </div>
         <div class="panel tab-C">
 
@@ -154,26 +158,28 @@
               <% end %>
             </div>
           </div>
-          <% if @closets.where(user_id: current_user.id).nil? %>
-            <div class="favorite-title desc">着用回数が多いアイテム</div>
-            <div class="stats-images">
-              <% @favorite_desc_autumn.each do |closet| %>
-                <div>
-                <div class="stats-image"><%= image_tag closet.image %></div>
-                <div class="stats-count"><%= "#{closet.favorites.count}回" %></div>
-                </div>
-              <% end %>
-            </div>
-            <div class="favorite-title">着用回数が少ないアイテム</div>
-            <div class="stats-images">
-              <% @favorite_asc_autumn.each do |closet| %>
-                <div>
-                <div class="stats-image"><%= image_tag closet.image %></div>
-                <div class="stats-count"><%= "#{closet.favorites.count}回" %></div>
-                </div>
-              <% end %>
-            </div>
-          <% end %>
+          <div class="under">
+            <% if @favorite_desc_autumn.present? %>
+              <div class="favorite-title desc">着用回数が多いアイテム</div>
+              <div class="stats-images">
+                <% @favorite_desc_autumn.each do |closet| %>
+                  <div>
+                  <div class="stats-image"><%= image_tag closet.image %></div>
+                  <div class="stats-count"><%= "#{closet.favorites.count}回" %></div>
+                  </div>
+                <% end %>
+              </div>
+              <div class="favorite-title">着用回数が少ないアイテム</div>
+              <div class="stats-images">
+                <% @favorite_asc_autumn.each do |closet| %>
+                  <div>
+                  <div class="stats-image"><%= image_tag closet.image %></div>
+                  <div class="stats-count"><%= "#{closet.favorites.count}回" %></div>
+                  </div>
+                <% end %>
+              </div>
+            <% end %>
+          </div>
         </div>
         <div class="panel tab-D">
 
@@ -209,26 +215,28 @@
               <% end %>
             </div>
           </div>
-          <% if @closets.where(user_id: current_user.id).nil? %>
-            <div class="favorite-title desc">着用回数が多いアイテム</div>
-            <div class="stats-images">
-              <% @favorite_desc_winter.each do |closet| %>
-                <div>
-                <div class="stats-image"><%= image_tag closet.image %></div>
-                <div class="stats-count"><%= "#{closet.favorites.count}回" %></div>
-                </div>
-              <% end %>
-            </div>
-            <div class="favorite-title">着用回数が少ないアイテム</div>
-            <div class="stats-images">
-              <% @favorite_asc_winter.each do |closet| %>
-                <div>
-                <div class="stats-image"><%= image_tag closet.image %></div>
-                <div class="stats-count"><%= "#{closet.favorites.count}回" %></div>
-                </div>
-              <% end %>
-            </div>
-          <% end %>
+          <div class="under">
+            <% if @favorite_desc_winter.present? %>
+              <div class="favorite-title desc">着用回数が多いアイテム</div>
+              <div class="stats-images">
+                <% @favorite_desc_winter.each do |closet| %>
+                  <div>
+                  <div class="stats-image"><%= image_tag closet.image %></div>
+                  <div class="stats-count"><%= "#{closet.favorites.count}回" %></div>
+                  </div>
+                <% end %>
+              </div>
+              <div class="favorite-title">着用回数が少ないアイテム</div>
+              <div class="stats-images">
+                <% @favorite_asc_winter.each do |closet| %>
+                  <div>
+                  <div class="stats-image"><%= image_tag closet.image %></div>
+                  <div class="stats-count"><%= "#{closet.favorites.count}回" %></div>
+                  </div>
+                <% end %>
+              </div>
+            <% end %>
+          </div>
 
         </div>
 
@@ -239,9 +247,9 @@
 
   <div class="stats-right">
     <div class="date">クローゼット総資産額：<span><%= "¥#{@closets.where(user_id: current_user.id).sum(:price)}" %></span></div>
-    <div class="date">アイテム平均価格：<span><%= "¥#{@closets.where(user_id: current_user.id).sum(:price).fdiv(@closets.count).round}"%></span></div>
+    <div class="date">アイテム平均価格：<span><%= "¥#{@closets.where(user_id: current_user.id).sum(:price).fdiv(@closets.where(user_id: current_user.id).count).round}"%></span></div>
     <div class="date">アイテム最高価格：
-      <% if @closets.empty? %>
+      <% if @closets.present? %>
         <span><%= "¥#{@closets.where(user_id: current_user.id).maximum(:price)}"%></span>
       <% else %>
         <span>¥0</span>
@@ -249,21 +257,21 @@
     </div>
     <div class="date bottom">所持アイテム数：<span><%= "#{@closets.where(user_id: current_user.id).length}"%></span></div>
     <div class="date">今月の使用額：
-      <% if @closets.empty? %>
+      <% if @closets.present? %>
         <span><%= "¥#{@closets_month.where(user_id: current_user.id).sum(:price)[Date.today.month]}"%></span>
       <% else %>
         <span>¥0</span>
       <% end %>
     </div>
     <div class="date">今月のアイテム最高価格：
-      <% if @closets.empty? %>
+      <% if @closets.present? %>
         <span><%= "¥#{@closets_month.where(user_id: current_user.id).maximum(:price)[Date.today.month]}" %></span>
       <% else %>
         <span>¥0</span>
       <% end %>
     </div>
     <div class="date">今月の保管アイテム数：
-      <% if @closets.empty? %>
+      <% if @closets.present? %>
         <span><%= "#{@closets_month.where(user_id: current_user.id).count[Date.today.month]}"%></span>
       <% else %>
         <span>0</span>

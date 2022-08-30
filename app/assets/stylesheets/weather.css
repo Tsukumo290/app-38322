@@ -1,0 +1,15 @@
+#weather {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.weather__title {
+  margin-bottom: 20px;
+  padding-bottom: 8px;
+  border-bottom: 1.5px solid lightgray;
+  font-size: 21px;
+}
+.weather__content--report {
+  width: 150px;
+  height: 120px;
+}

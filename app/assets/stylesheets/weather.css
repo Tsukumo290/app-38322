@@ -11,7 +11,7 @@
 }
 .weather__content--report {
   width: 150px;
-  height: 120px;
+  margin-bottom: 20px;
 }
 .weather__content--report img {
   height: 60px;
@@ -22,8 +22,14 @@
 @media (max-width: 599px) {
   #weather {
     display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
+    justify-content: normal;
+    margin-bottom: 28px;
+    overflow: scroll;
+    -ms-overflow-style: none;    /* IE, Edge 対応 */
+    scrollbar-width: none;       /* Firefox 対応 */
+  }
+  #weather::-webkit-scrollbar {  /* Chrome, Safari 対応 */
+    display:none;
   }
   .weather__title {
     margin-bottom: 10px;
@@ -33,13 +39,17 @@
   }
   .weather__content--report {
     width: 106px;
-    height: 180px;
+    margin-bottom: 0px;
+  }
+  .weather__content--report img {
+    width: 63px;
   }
   .weather__content--report-date {
     font-size: 14px;
   }
   .weather__content--report-temp-max {
     font-size: 14px;
+    width: 82px;
   }
   .weather__content--report-temp-min {
     font-size: 14px;

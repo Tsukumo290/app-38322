@@ -1,17 +1,20 @@
 # ER図
-![Closet_ER](https://user-images.githubusercontent.com/109210394/186546843-996fcd79-f0f6-4432-9ff6-727df99a2480.png)
+![Closet_ER](https://user-images.githubusercontent.com/109210394/187550180-6f345ecd-ad58-421b-822f-f592575d3459.png)
 
 ## usersテーブル
 
-| Column            | Type   | Options                   |
-| ----------------- | ------ | ------------------------- |
-|name               | string | null: false               |
-|email              | string | null: false, unique: true |
-|encrypted_password | string | null: false               |
+| Column            | Type    | Options                   |
+| ----------------- | ------- | ------------------------- |
+|name               | string  | null: false               |
+|email              | string  | null: false, unique: true |
+|encrypted_password | string  | null: false               |
+|prefecture_code    | integer |                           |
 
 ### association
 - has_many :closets
 - has_many :memos
+- has_many :favorites
+- has_many :calendars
 
 
 ## closetsテーブル
@@ -29,9 +32,11 @@
 ### association
 - belongs_to :user
 - has_many :memos
+- has_many :favorites
 
 
 ## memosテーブル
+
 | Column   | Type       | Options                        |
 | -------- | ---------- | ------------------------------ |
 |content   | string     | null: false                    |
@@ -44,6 +49,7 @@
 
 
 ## favoritesテーブル
+
 | Column   | Type       | Options                        |
 | -------- | ---------- | ------------------------------ |
 |user_id   | references | null: false, foreign_key: true |
@@ -53,7 +59,9 @@
 - belongs_to :user
 - belongs_to :closet
 
+
 ## calendarsテーブル
+
 | Column    | Type       | Options                        |
 | --------- | ---------- | ------------------------------ |
 |start_time | datetime   | null: false                    |

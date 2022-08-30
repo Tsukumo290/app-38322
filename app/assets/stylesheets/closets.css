@@ -325,7 +325,7 @@
     line-height: 24px;
   }
   .clothes-form-content {
-    height: 590px;
+    height: 600px;
     width: calc(100% - 15%);
     margin-top: 30px;
     margin-bottom: 30px;
@@ -401,114 +401,93 @@
     width: 100%;
     height: 35px;
     border: 1px solid gray;
+    margin-top: 10px;
   }
   
   /*モーダルウィンドウのcss*/
-  
-  #mask {
-    background-color: rgba(0, 0, 0, 0.5);
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    z-index: 1;
-  }
-  
   #modal {
-    position: fixed;
-    top: 10vh;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    transform: translate(0, 0) scale(1);
-    transition: 0.2s;
-    z-index: 2;
-    width: 750px;
-  }
-  
-  #mask.hidden {
-    opacity: 0;
-    visibility: hidden;
-  }
-  
-  #modal.hidden {
-    opacity: 0;
-    visibility: hidden;
-    transform: translate(0, 0) scale(0.8);
+    width: calc(100% - 15%);
+    height: calc(100% - 20%);
   }
   
   /* show画面のcss */
   
   .show {
-    height: 750px;
-    width: 750px;
-    background-color: white;
-    padding: 22.5px 45px 0;
-    border-radius: 2px;
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    overflow: scroll;
   }
   .show-menu {
-    display: flex;
-    justify-content: right;
-    height: 44px;
+    height: 20px;
+    font-size: 14px;
+    margin-bottom: 10px;
   }
   .show-contents {
-    display: flex;
+    display: block;
     height: 100%;
     width: 100%;
   }
+  .show-left {
+    height: 100%;
+    width: 100%;
+    padding: 0 20px;
+  }
   .show-image img {
-    height: 320px;
-    width: 320px;
-    object-fit: cover;
+    height: 300px;
+    width: 100%;
   }
   .show-category {
-    height: 50px;
-    border-bottom: 1px solid lightgray;
-    width: 320px;
-    line-height: 50px;
-    text-align: left;
-    font-size: 17px;
+    height: 40px;
+    width: 100%;
+    line-height: 40px;
+    font-size: 16px;
   }
   .favoriteArea {
-    height: 50px;
-    width: 320px;
-    border-bottom: 1px solid lightgray;
-    line-height: 50px;
-    text-align: left;
-    font-size: 17px;
+    height: 40px;
+    width: 100%;
+    line-height: 40px;
+    font-size: 15px;
   }
   .show-right {
-    height: 520px;
-    width: 320px;
-    margin-left: 20px;
-  }
-  #memo-display {
-    height: 575px;
+    height: 100%;
     width: 100%;
-    font-size: 17px;
+    margin-left: 0px;
+    padding: 0 20px;
+  }
+
+  #memo-display {
+    height: 100%;
+    width: 100%;
+    font-size: 15px;
+    padding-top: 50px;
   }
   .memo-form {
-    height: 50px;
+    height: 35px;
+    font-size: 14px;
   }
   .memo-content input {
-    height: 50px;
+    height: 35px;
     display: block;
   }
   .memo-content {
-    width: 270px;
+    width: calc(100% - 50px);
     padding-left: 10px;
   }
   .memo-form-submit {
-    height: 50px;
+    height: 35px;
     width: 50px;
     display: block;
     cursor: pointer;
+    font-size: 14px;
   }
   .memo-form-display {
     display: flex;
   }
   .memo {
-    margin-bottom: 5px;
+    margin-bottom: 3px;
+  }
+  .space {
+    height: 30px;
   }
 }

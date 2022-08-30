@@ -13,36 +13,41 @@
         </ul>
       </div>
 
-      <div class="panel-group">
+      <div class="panel-group panel-height">
         <div class="panel tab-A is-show">
           <div class="panel-category">カテゴリー</div>
-          <%= pie_chart @closets.where(season_id: 1).group(:genre_id).count, legend: false, colors: [ "#cd7693","#eab9c9","#f2d6df"]%>
-          <div class="item-count">アイテム数</div>
-          <% if @closets.where(season_id: 1, genre_id: 1).present? %>
-            <div class="category-count"><span class="spring1">●</span><%= "アウター：#{@closets.where(genre_id: 1, season_id: 1).length}" %></div>
-          <% end %>
-          <% if @closets.where(season_id: 1, genre_id: 2).present? %>
-            <div class="category-count">
-            <% if @closets.where(season_id: 1, genre_id: 1).blank? %>
-            <span class="spring1">●</span>
-            <% else %>
-            <span class="spring2">●</span>
-            <% end %>
-            <%= "トップス：#{@closets.where(genre_id: 2, season_id: 1).length}" %>
-            </div>
-          <% end %>
-          <% if @closets.where(season_id: 1, genre_id: 3).present? %>
-            <div class="category-count">
-              <% if @closets.where(season_id: 1, genre_id: 1).blank? && @closets.where(season_id: 1, genre_id: 2).blank? %>
-              <span class="spring1">●</span>
-              <% elsif @closets.where(season_id: 1, genre_id: 1).blank? || @closets.where(season_id: 1, genre_id: 2).blank? %>
-              <span class="spring2">●</span>
-              <% else %>
-              <span class="spring3">●</span>
+          
+          <div class="canvas-area">
+            <div class="canvas"><%= pie_chart @closets.where(season_id: 1).group(:genre_id).count, legend: false, colors: [ "#cd7693","#eab9c9","#f2d6df"]%></div>
+            <div class="canvas-content">
+              <div class="item-count">アイテム数</div>
+              <% if @closets.where(season_id: 1, genre_id: 1).present? %>
+                <div class="category-count"><span class="spring1">●</span><%= "アウター：#{@closets.where(genre_id: 1, season_id: 1).length}" %></div>
               <% end %>
-              <%= "ボトムス：#{@closets.where(genre_id: 3, season_id: 1).length}" %>
+              <% if @closets.where(season_id: 1, genre_id: 2).present? %>
+                <div class="category-count">
+                <% if @closets.where(season_id: 1, genre_id: 1).blank? %>
+                <span class="spring1">●</span>
+                <% else %>
+                <span class="spring2">●</span>
+                <% end %>
+                <%= "トップス：#{@closets.where(genre_id: 2, season_id: 1).length}" %>
+                </div>
+              <% end %>
+              <% if @closets.where(season_id: 1, genre_id: 3).present? %>
+                <div class="category-count">
+                  <% if @closets.where(season_id: 1, genre_id: 1).blank? && @closets.where(season_id: 1, genre_id: 2).blank? %>
+                  <span class="spring1">●</span>
+                  <% elsif @closets.where(season_id: 1, genre_id: 1).blank? || @closets.where(season_id: 1, genre_id: 2).blank? %>
+                  <span class="spring2">●</span>
+                  <% else %>
+                  <span class="spring3">●</span>
+                  <% end %>
+                  <%= "ボトムス：#{@closets.where(genre_id: 3, season_id: 1).length}" %>
+                </div>
+              <% end %>
             </div>
-          <% end %>
+          </div>
 
           <div class="favorite-title desc">着用回数が多いアイテム</div>
           <div class="stats-images">
@@ -65,34 +70,39 @@
 
         </div>
         <div class="panel tab-B">
-          <div class="panel-category">カテゴリー</div>
-          <%= pie_chart @closets.where(season_id: 2).group(:genre_id).count, legend: false, colors: [ "#76cd76","#b9eaba","#d6f2d6"] %>
-          <div class="item-count">アイテム数</div>
-          <% if @closets.where(season_id: 2, genre_id: 1).present? %>
-            <div class="category-count"><span class="summer1">●</span><%= "アウター：#{@closets.where(genre_id: 1, season_id: 2).length}" %></div>
-          <% end %>
-          <% if @closets.where(season_id: 2, genre_id: 2).present? %>
-            <div class="category-count">
-            <% if @closets.where(season_id: 2, genre_id: 1).blank? %>
-            <span class="summer1">●</span>
-            <% else %>
-            <span class="summer2">●</span>
-            <% end %>
-            <%= "トップス：#{@closets.where(genre_id: 2, season_id: 2).length}" %>
-            </div>
-          <% end %>
-          <% if @closets.where(season_id: 2, genre_id: 3).present? %>
-            <div class="category-count">
-              <% if @closets.where(season_id: 2, genre_id: 1).blank? && @closets.where(season_id: 2, genre_id: 2).blank? %>
-              <span class="summer1">●</span>
-              <% elsif @closets.where(season_id: 2, genre_id: 1).blank? || @closets.where(season_id: 2, genre_id: 2).blank? %>
-              <span class="summer2">●</span>
-              <% else %>
-              <span class="summer3">●</span>
+
+          <div class="canvas-area">
+            <div class="panel-category">カテゴリー</div>
+            <div class="canvas"><%= pie_chart @closets.where(season_id: 2).group(:genre_id).count, legend: false, colors: [ "#76cd76","#b9eaba","#d6f2d6"] %></div>
+            <div class="canvas-content">
+              <div class="item-count">アイテム数</div>
+              <% if @closets.where(season_id: 2, genre_id: 1).present? %>
+                <div class="category-count"><span class="summer1">●</span><%= "アウター：#{@closets.where(genre_id: 1, season_id: 2).length}" %></div>
               <% end %>
-              <%= "ボトムス：#{@closets.where(genre_id: 3, season_id: 2).length}" %>
+              <% if @closets.where(season_id: 2, genre_id: 2).present? %>
+                <div class="category-count">
+                <% if @closets.where(season_id: 2, genre_id: 1).blank? %>
+                <span class="summer1">●</span>
+                <% else %>
+                <span class="summer2">●</span>
+                <% end %>
+                <%= "トップス：#{@closets.where(genre_id: 2, season_id: 2).length}" %>
+                </div>
+              <% end %>
+              <% if @closets.where(season_id: 2, genre_id: 3).present? %>
+                <div class="category-count">
+                  <% if @closets.where(season_id: 2, genre_id: 1).blank? && @closets.where(season_id: 2, genre_id: 2).blank? %>
+                  <span class="summer1">●</span>
+                  <% elsif @closets.where(season_id: 2, genre_id: 1).blank? || @closets.where(season_id: 2, genre_id: 2).blank? %>
+                  <span class="summer2">●</span>
+                  <% else %>
+                  <span class="summer3">●</span>
+                  <% end %>
+                  <%= "ボトムス：#{@closets.where(genre_id: 3, season_id: 2).length}" %>
+                </div>
+              <% end %>
             </div>
-          <% end %>
+          </div>
 
           <div class="favorite-title desc">着用回数が多いアイテム</div>
           <div class="stats-images">
@@ -115,34 +125,39 @@
 
         </div>
         <div class="panel tab-C">
-          <div class="panel-category">カテゴリー</div>
-          <%= pie_chart @closets.where(season_id: 3).group(:genre_id).count, legend: false, colors: [ "#cd9376","#eac9b9","#f2dfd6"] %>
-          <div class="item-count">アイテム数</div>
-          <% if @closets.where(season_id: 3, genre_id: 1).present? %>
-            <div class="category-count"><span class="autumn1">●</span><%= "アウター：#{@closets.where(genre_id: 1, season_id: 3).length}" %></div>
-          <% end %>
-          <% if @closets.where(season_id: 3, genre_id: 2).present? %>
-            <div class="category-count">
-            <% if @closets.where(season_id: 3, genre_id: 1).blank? %>
-            <span class="autumn1">●</span>
-            <% else %>
-            <span class="autumn2">●</span>
-            <% end %>
-            <%= "トップス：#{@closets.where(genre_id: 2, season_id: 3).length}" %>
-            </div>
-          <% end %>
-          <% if @closets.where(season_id: 3, genre_id: 3).present? %>
-            <div class="category-count">
-              <% if @closets.where(season_id: 3, genre_id: 1).blank? && @closets.where(season_id: 3, genre_id: 2).blank? %>
-              <span class="autumn1">●</span>
-              <% elsif @closets.where(season_id: 3, genre_id: 1).blank? || @closets.where(season_id: 3, genre_id: 2).blank? %>
-              <span class="autumn2">●</span>
-              <% else %>
-              <span class="autumn3">●</span>
+
+          <div class="canvas-area">
+            <div class="panel-category">カテゴリー</div>
+            <div class="canvas"><%= pie_chart @closets.where(season_id: 3).group(:genre_id).count, legend: false, colors: [ "#cd9376","#eac9b9","#f2dfd6"] %></div>
+            <div class="canvas-content">
+              <div class="item-count">アイテム数</div>
+              <% if @closets.where(season_id: 3, genre_id: 1).present? %>
+                <div class="category-count"><span class="autumn1">●</span><%= "アウター：#{@closets.where(genre_id: 1, season_id: 3).length}" %></div>
               <% end %>
-              <%= "ボトムス：#{@closets.where(genre_id: 3, season_id: 3).length}" %>
+              <% if @closets.where(season_id: 3, genre_id: 2).present? %>
+                <div class="category-count">
+                <% if @closets.where(season_id: 3, genre_id: 1).blank? %>
+                <span class="autumn1">●</span>
+                <% else %>
+                <span class="autumn2">●</span>
+                <% end %>
+                <%= "トップス：#{@closets.where(genre_id: 2, season_id: 3).length}" %>
+                </div>
+              <% end %>
+              <% if @closets.where(season_id: 3, genre_id: 3).present? %>
+                <div class="category-count">
+                  <% if @closets.where(season_id: 3, genre_id: 1).blank? && @closets.where(season_id: 3, genre_id: 2).blank? %>
+                  <span class="autumn1">●</span>
+                  <% elsif @closets.where(season_id: 3, genre_id: 1).blank? || @closets.where(season_id: 3, genre_id: 2).blank? %>
+                  <span class="autumn2">●</span>
+                  <% else %>
+                  <span class="autumn3">●</span>
+                  <% end %>
+                  <%= "ボトムス：#{@closets.where(genre_id: 3, season_id: 3).length}" %>
+                </div>
+              <% end %>
             </div>
-          <% end %>
+          </div>
 
           <div class="favorite-title desc">着用回数が多いアイテム</div>
           <div class="stats-images">
@@ -164,34 +179,39 @@
           </div>
         </div>
         <div class="panel tab-D">
-          <div class="panel-category">カテゴリー</div>
-          <%= pie_chart @closets.where(season_id: 4).group(:genre_id).count, legend: false, colors: [ "#769fcd","#b9d7ea","#d6e6f2"]%>
-          <div class="item-count">アイテム数</div>
-          <% if @closets.where(season_id: 4, genre_id: 1).present? %>
-            <div class="category-count"><span class="winter1">●</span><%= "アウター：#{@closets.where(genre_id: 1, season_id: 4).length}" %></div>
-          <% end %>
-          <% if @closets.where(season_id: 4, genre_id: 2).present? %>
-            <div class="category-count">
-            <% if @closets.where(season_id: 4, genre_id: 1).blank? %>
-            <span class="winter1">●</span>
-            <% else %>
-            <span class="winter2">●</span>
-            <% end %>
-            <%= "トップス：#{@closets.where(genre_id: 2, season_id: 4).length}" %>
-            </div>
-          <% end %>
-          <% if @closets.where(season_id: 4, genre_id: 3).present? %>
-            <div class="category-count">
-              <% if @closets.where(season_id: 4, genre_id: 1).blank? && @closets.where(season_id: 4, genre_id: 2).blank? %>
-              <span class="winter1">●</span>
-              <% elsif @closets.where(season_id: 4, genre_id: 1).blank? || @closets.where(season_id: 4, genre_id: 2).blank? %>
-              <span class="winter2">●</span>
-              <% else %>
-              <span class="winter3">●</span>
+
+          <div class="canvas-area">
+            <div class="panel-category">カテゴリー</div>
+            <div class="canvas"><%= pie_chart @closets.where(season_id: 4).group(:genre_id).count, legend: false, colors: [ "#769fcd","#b9d7ea","#d6e6f2"]%></div>
+            <div class="canvas-content">
+              <div class="item-count">アイテム数</div>
+              <% if @closets.where(season_id: 4, genre_id: 1).present? %>
+                <div class="category-count"><span class="winter1">●</span><%= "アウター：#{@closets.where(genre_id: 1, season_id: 4).length}" %></div>
               <% end %>
-              <%= "ボトムス：#{@closets.where(genre_id: 3, season_id: 4).length}" %>
+              <% if @closets.where(season_id: 4, genre_id: 2).present? %>
+                <div class="category-count">
+                <% if @closets.where(season_id: 4, genre_id: 1).blank? %>
+                <span class="winter1">●</span>
+                <% else %>
+                <span class="winter2">●</span>
+                <% end %>
+                <%= "トップス：#{@closets.where(genre_id: 2, season_id: 4).length}" %>
+                </div>
+              <% end %>
+              <% if @closets.where(season_id: 4, genre_id: 3).present? %>
+                <div class="category-count">
+                  <% if @closets.where(season_id: 4, genre_id: 1).blank? && @closets.where(season_id: 4, genre_id: 2).blank? %>
+                  <span class="winter1">●</span>
+                  <% elsif @closets.where(season_id: 4, genre_id: 1).blank? || @closets.where(season_id: 4, genre_id: 2).blank? %>
+                  <span class="winter2">●</span>
+                  <% else %>
+                  <span class="winter3">●</span>
+                  <% end %>
+                  <%= "ボトムス：#{@closets.where(genre_id: 3, season_id: 4).length}" %>
+                </div>
+              <% end %>
             </div>
-          <% end %>
+          </div>
 
           <div class="favorite-title desc">着用回数が多いアイテム</div>
           <div class="stats-images">

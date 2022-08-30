@@ -1,6 +1,6 @@
 class CalendarsController < ApplicationController
   def index
-    @calendars = Calendar.all
+    @calendars = Calendar.where(user_id: current_user.id).all
   end
 
   def new

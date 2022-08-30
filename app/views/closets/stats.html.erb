@@ -14,199 +14,202 @@
         <div class="panel tab-A is-show">
           <div class="panel-category">カテゴリー</div>    
           <div class="canvas-area">
-            <div class="canvas"><%= pie_chart @closets.where(season_id: 1).group(:genre_id).count, legend: false, colors: [ "#cd7693","#eab9c9","#f2d6df"]%></div>
+            <div class="canvas"><%= pie_chart @closets.where(season_id: 1, user_id: current_user.id).group(:genre_id).count, legend: false, colors: [ "#cd7693","#eab9c9","#f2d6df"]%></div>
             <div class="canvas-content">
               <div class="item-count">アイテム数</div>
-              <% if @closets.where(season_id: 1, genre_id: 1).present? %>
-                <div class="category-count"><span class="spring1">●</span><%= "アウター：#{@closets.where(genre_id: 1, season_id: 1).length}" %></div>
+              <% if @closets.where(season_id: 1, genre_id: 1, user_id: current_user.id).present? %>
+                <div class="category-count"><span class="spring1">●</span><%= "アウター：#{@closets.where(genre_id: 1, season_id: 1, user_id: current_user.id).length}" %></div>
               <% end %>
-              <% if @closets.where(season_id: 1, genre_id: 2).present? %>
+              <% if @closets.where(season_id: 1, genre_id: 2, user_id: current_user.id).present? %>
                 <div class="category-count">
-                <% if @closets.where(season_id: 1, genre_id: 1).blank? %>
+                <% if @closets.where(season_id: 1, genre_id: 1, user_id: current_user.id).blank? %>
                 <span class="spring1">●</span>
                 <% else %>
                 <span class="spring2">●</span>
                 <% end %>
-                <%= "トップス：#{@closets.where(genre_id: 2, season_id: 1).length}" %>
+                <%= "トップス：#{@closets.where(genre_id: 2, season_id: 1, user_id: current_user.id).length}" %>
                 </div>
               <% end %>
-              <% if @closets.where(season_id: 1, genre_id: 3).present? %>
+              <% if @closets.where(season_id: 1, genre_id: 3, user_id: current_user.id).present? %>
                 <div class="category-count">
-                  <% if @closets.where(season_id: 1, genre_id: 1).blank? && @closets.where(season_id: 1, genre_id: 2).blank? %>
+                  <% if @closets.where(season_id: 1, genre_id: 1, user_id: current_user.id).blank? && @closets.where(season_id: 1, genre_id: 2, user_id: current_user.id).blank? %>
                   <span class="spring1">●</span>
-                  <% elsif @closets.where(season_id: 1, genre_id: 1).blank? || @closets.where(season_id: 1, genre_id: 2).blank? %>
+                  <% elsif @closets.where(season_id: 1, genre_id: 1, user_id: current_user.id).blank? || @closets.where(season_id: 1, genre_id: 2, user_id: current_user.id).blank? %>
                   <span class="spring2">●</span>
                   <% else %>
                   <span class="spring3">●</span>
                   <% end %>
-                  <%= "ボトムス：#{@closets.where(genre_id: 3, season_id: 1).length}" %>
+                  <%= "ボトムス：#{@closets.where(genre_id: 3, season_id: 1, user_id: current_user.id).length}" %>
                 </div>
               <% end %>
             </div>
           </div>
-          <div class="favorite-title desc">着用回数が多いアイテム</div>
-          <div class="stats-images">
-            <% @favorite_desc_spring.each do |closet| %>
-              <div>
-              <div class="stats-image"><%= image_tag closet.image %></div>
-              <div class="stats-count"><%= "#{closet.favorites.count}回" %></div>
-              </div>
-            <% end %>
-          </div>
-          <div class="favorite-title">着用回数が少ないアイテム</div>
-          <div class="stats-images">
-            <% @favorite_asc_spring.each do |closet| %>
-              <div>
-              <div class="stats-image"><%= image_tag closet.image %></div>
-              <div class="stats-count"><%= "#{closet.favorites.count}回" %></div>
-              </div>
-            <% end %>
-          </div>
+          <% if @closets.where(user_id: current_user.id).nil? %>
+            <div class="favorite-title desc">着用回数が多いアイテム</div>
+            <div class="stats-images">
+              <% @favorite_desc_spring.each do |closet| %>
+                <div>
+                <div class="stats-image"><%= image_tag closet.image %></div>
+                <div class="stats-count"><%= "#{closet.favorites.count}回" %></div>
+                </div>
+              <% end %>
+            </div>
+            <div class="favorite-title">着用回数が少ないアイテム</div>
+            <div class="stats-images">
+              <% @favorite_asc_spring.each do |closet| %>
+                <div>
+                <div class="stats-image"><%= image_tag closet.image %></div>
+                <div class="stats-count"><%= "#{closet.favorites.count}回" %></div>
+                </div>
+              <% end %>
+            </div>
+          <% end %>
         </div>
         <div class="panel tab-B">
 
           <div class="canvas-area">
             <div class="panel-category">カテゴリー</div>
-            <div class="canvas"><%= pie_chart @closets.where(season_id: 2).group(:genre_id).count, legend: false, colors: [ "#76cd76","#b9eaba","#d6f2d6"] %></div>
+            <div class="canvas"><%= pie_chart @closets.where(season_id: 2, user_id: current_user.id).group(:genre_id).count, legend: false, colors: [ "#76cd76","#b9eaba","#d6f2d6"] %></div>
             <div class="canvas-content">
               <div class="item-count">アイテム数</div>
-              <% if @closets.where(season_id: 2, genre_id: 1).present? %>
-                <div class="category-count"><span class="summer1">●</span><%= "アウター：#{@closets.where(genre_id: 1, season_id: 2).length}" %></div>
+              <% if @closets.where(season_id: 2, genre_id: 1, user_id: current_user.id).present? %>
+                <div class="category-count"><span class="summer1">●</span><%= "アウター：#{@closets.where(genre_id: 1, season_id: 2, user_id: current_user.id).length}" %></div>
               <% end %>
-              <% if @closets.where(season_id: 2, genre_id: 2).present? %>
+              <% if @closets.where(season_id: 2, genre_id: 2, user_id: current_user.id).present? %>
                 <div class="category-count">
-                <% if @closets.where(season_id: 2, genre_id: 1).blank? %>
+                <% if @closets.where(season_id: 2, genre_id: 1, user_id: current_user.id).blank? %>
                 <span class="summer1">●</span>
                 <% else %>
                 <span class="summer2">●</span>
                 <% end %>
-                <%= "トップス：#{@closets.where(genre_id: 2, season_id: 2).length}" %>
+                <%= "トップス：#{@closets.where(genre_id: 2, season_id: 2, user_id: current_user.id).length}" %>
                 </div>
               <% end %>
-              <% if @closets.where(season_id: 2, genre_id: 3).present? %>
+              <% if @closets.where(season_id: 2, genre_id: 3, user_id: current_user.id).present? %>
                 <div class="category-count">
-                  <% if @closets.where(season_id: 2, genre_id: 1).blank? && @closets.where(season_id: 2, genre_id: 2).blank? %>
+                  <% if @closets.where(season_id: 2, genre_id: 1, user_id: current_user.id).blank? && @closets.where(season_id: 2, genre_id: 2, user_id: current_user.id).blank? %>
                   <span class="summer1">●</span>
-                  <% elsif @closets.where(season_id: 2, genre_id: 1).blank? || @closets.where(season_id: 2, genre_id: 2).blank? %>
+                  <% elsif @closets.where(season_id: 2, genre_id: 1, user_id: current_user.id).blank? || @closets.where(season_id: 2, genre_id: 2, user_id: current_user.id).blank? %>
                   <span class="summer2">●</span>
                   <% else %>
                   <span class="summer3">●</span>
                   <% end %>
-                  <%= "ボトムス：#{@closets.where(genre_id: 3, season_id: 2).length}" %>
+                  <%= "ボトムス：#{@closets.where(genre_id: 3, season_id: 2, user_id: current_user.id).length}" %>
                 </div>
               <% end %>
             </div>
           </div>
-
-          <div class="favorite-title desc">着用回数が多いアイテム</div>
-          <div class="stats-images">
-          <% @favorite_desc_summer.each do |closet| %>
-            <div>
-            <div class="stats-image"><%= image_tag closet.image %></div>
-            <div class="stats-count"><%= "#{closet.favorites.count}回" %></div>
+          <% if @closets.where(user_id: current_user.id).nil? %>
+            <div class="favorite-title desc">着用回数が多いアイテム</div>
+            <div class="stats-images">
+            <% @favorite_desc_summer.each do |closet| %>
+              <div>
+              <div class="stats-image"><%= image_tag closet.image %></div>
+              <div class="stats-count"><%= "#{closet.favorites.count}回" %></div>
+              </div>
+            <% end %>
+            </div>
+            <div class="favorite-title">着用回数が少ないアイテム</div>
+            <div class="stats-images">
+            <% @favorite_asc_summer.each do |closet| %>
+              <div>
+              <div class="stats-image"><%= image_tag closet.image %></div>
+              <div class="stats-count"><%= "#{closet.favorites.count}回" %></div>
+              </div>
+            <% end %>
             </div>
           <% end %>
-          </div>
-          <div class="favorite-title">着用回数が少ないアイテム</div>
-          <div class="stats-images">
-          <% @favorite_asc_summer.each do |closet| %>
-            <div>
-            <div class="stats-image"><%= image_tag closet.image %></div>
-            <div class="stats-count"><%= "#{closet.favorites.count}回" %></div>
-            </div>
-          <% end %>
-          </div>
-
         </div>
         <div class="panel tab-C">
 
           <div class="canvas-area">
             <div class="panel-category">カテゴリー</div>
-            <div class="canvas"><%= pie_chart @closets.where(season_id: 3).group(:genre_id).count, legend: false, colors: [ "#cd9376","#eac9b9","#f2dfd6"] %></div>
+            <div class="canvas"><%= pie_chart @closets.where(season_id: 3, user_id: current_user.id).group(:genre_id).count, legend: false, colors: [ "#cd9376","#eac9b9","#f2dfd6"] %></div>
             <div class="canvas-content">
               <div class="item-count">アイテム数</div>
-              <% if @closets.where(season_id: 3, genre_id: 1).present? %>
-                <div class="category-count"><span class="autumn1">●</span><%= "アウター：#{@closets.where(genre_id: 1, season_id: 3).length}" %></div>
+              <% if @closets.where(season_id: 3, genre_id: 1, user_id: current_user.id).present? %>
+                <div class="category-count"><span class="autumn1">●</span><%= "アウター：#{@closets.where(genre_id: 1, season_id: 3, user_id: current_user.id).length}" %></div>
               <% end %>
-              <% if @closets.where(season_id: 3, genre_id: 2).present? %>
+              <% if @closets.where(season_id: 3, genre_id: 2, user_id: current_user.id).present? %>
                 <div class="category-count">
-                <% if @closets.where(season_id: 3, genre_id: 1).blank? %>
+                <% if @closets.where(season_id: 3, genre_id: 1, user_id: current_user.id).blank? %>
                 <span class="autumn1">●</span>
                 <% else %>
                 <span class="autumn2">●</span>
                 <% end %>
-                <%= "トップス：#{@closets.where(genre_id: 2, season_id: 3).length}" %>
+                <%= "トップス：#{@closets.where(genre_id: 2, season_id: 3, user_id: current_user.id).length}" %>
                 </div>
               <% end %>
-              <% if @closets.where(season_id: 3, genre_id: 3).present? %>
+              <% if @closets.where(season_id: 3, genre_id: 3, user_id: current_user.id).present? %>
                 <div class="category-count">
-                  <% if @closets.where(season_id: 3, genre_id: 1).blank? && @closets.where(season_id: 3, genre_id: 2).blank? %>
+                  <% if @closets.where(season_id: 3, genre_id: 1, user_id: current_user.id).blank? && @closets.where(season_id: 3, genre_id: 2, user_id: current_user.id).blank? %>
                   <span class="autumn1">●</span>
-                  <% elsif @closets.where(season_id: 3, genre_id: 1).blank? || @closets.where(season_id: 3, genre_id: 2).blank? %>
+                  <% elsif @closets.where(season_id: 3, genre_id: 1, user_id: current_user.id).blank? || @closets.where(season_id: 3, genre_id: 2, user_id: current_user.id).blank? %>
                   <span class="autumn2">●</span>
                   <% else %>
                   <span class="autumn3">●</span>
                   <% end %>
-                  <%= "ボトムス：#{@closets.where(genre_id: 3, season_id: 3).length}" %>
+                  <%= "ボトムス：#{@closets.where(genre_id: 3, season_id: 3, user_id: current_user.id).length}" %>
                 </div>
               <% end %>
             </div>
           </div>
-
-          <div class="favorite-title desc">着用回数が多いアイテム</div>
-          <div class="stats-images">
-            <% @favorite_desc_autumn.each do |closet| %>
-              <div>
-              <div class="stats-image"><%= image_tag closet.image %></div>
-              <div class="stats-count"><%= "#{closet.favorites.count}回" %></div>
-              </div>
-            <% end %>
-          </div>
-          <div class="favorite-title">着用回数が少ないアイテム</div>
-          <div class="stats-images">
-            <% @favorite_asc_autumn.each do |closet| %>
-              <div>
-              <div class="stats-image"><%= image_tag closet.image %></div>
-              <div class="stats-count"><%= "#{closet.favorites.count}回" %></div>
-              </div>
-            <% end %>
-          </div>
+          <% if @closets.where(user_id: current_user.id).nil? %>
+            <div class="favorite-title desc">着用回数が多いアイテム</div>
+            <div class="stats-images">
+              <% @favorite_desc_autumn.each do |closet| %>
+                <div>
+                <div class="stats-image"><%= image_tag closet.image %></div>
+                <div class="stats-count"><%= "#{closet.favorites.count}回" %></div>
+                </div>
+              <% end %>
+            </div>
+            <div class="favorite-title">着用回数が少ないアイテム</div>
+            <div class="stats-images">
+              <% @favorite_asc_autumn.each do |closet| %>
+                <div>
+                <div class="stats-image"><%= image_tag closet.image %></div>
+                <div class="stats-count"><%= "#{closet.favorites.count}回" %></div>
+                </div>
+              <% end %>
+            </div>
+          <% end %>
         </div>
         <div class="panel tab-D">
 
           <div class="canvas-area">
             <div class="panel-category">カテゴリー</div>
-            <div class="canvas"><%= pie_chart @closets.where(season_id: 4).group(:genre_id).count, legend: false, colors: [ "#769fcd","#b9d7ea","#d6e6f2"]%></div>
+            <div class="canvas"><%= pie_chart @closets.where(season_id: 4, user_id: current_user.id).group(:genre_id).count, legend: false, colors: [ "#769fcd","#b9d7ea","#d6e6f2"]%></div>
             <div class="canvas-content">
               <div class="item-count">アイテム数</div>
-              <% if @closets.where(season_id: 4, genre_id: 1).present? %>
-                <div class="category-count"><span class="winter1">●</span><%= "アウター：#{@closets.where(genre_id: 1, season_id: 4).length}" %></div>
+              <% if @closets.where(season_id: 4, genre_id: 1, user_id: current_user.id).present? %>
+                <div class="category-count"><span class="winter1">●</span><%= "アウター：#{@closets.where(genre_id: 1, season_id: 4, user_id: current_user.id).length}" %></div>
               <% end %>
-              <% if @closets.where(season_id: 4, genre_id: 2).present? %>
+              <% if @closets.where(season_id: 4, genre_id: 2, user_id: current_user.id).present? %>
                 <div class="category-count">
-                <% if @closets.where(season_id: 4, genre_id: 1).blank? %>
+                <% if @closets.where(season_id: 4, genre_id: 1, user_id: current_user.id).blank? %>
                 <span class="winter1">●</span>
                 <% else %>
                 <span class="winter2">●</span>
                 <% end %>
-                <%= "トップス：#{@closets.where(genre_id: 2, season_id: 4).length}" %>
+                <%= "トップス：#{@closets.where(genre_id: 2, season_id: 4, user_id: current_user.id).length}" %>
                 </div>
               <% end %>
-              <% if @closets.where(season_id: 4, genre_id: 3).present? %>
+              <% if @closets.where(season_id: 4, genre_id: 3, user_id: current_user.id).present? %>
                 <div class="category-count">
-                  <% if @closets.where(season_id: 4, genre_id: 1).blank? && @closets.where(season_id: 4, genre_id: 2).blank? %>
+                  <% if @closets.where(season_id: 4, genre_id: 1, user_id: current_user.id).blank? && @closets.where(season_id: 4, genre_id: 2, user_id: current_user.id).blank? %>
                   <span class="winter1">●</span>
-                  <% elsif @closets.where(season_id: 4, genre_id: 1).blank? || @closets.where(season_id: 4, genre_id: 2).blank? %>
+                  <% elsif @closets.where(season_id: 4, genre_id: 1, user_id: current_user.id).blank? || @closets.where(season_id: 4, genre_id: 2, user_id: current_user.id).blank? %>
                   <span class="winter2">●</span>
                   <% else %>
                   <span class="winter3">●</span>
                   <% end %>
-                  <%= "ボトムス：#{@closets.where(genre_id: 3, season_id: 4).length}" %>
+                  <%= "ボトムス：#{@closets.where(genre_id: 3, season_id: 4, user_id: current_user.id).length}" %>
                 </div>
               <% end %>
             </div>
           </div>
-
+          <% if @closets.where(user_id: current_user.id).nil? %>
             <div class="favorite-title desc">着用回数が多いアイテム</div>
             <div class="stats-images">
               <% @favorite_desc_winter.each do |closet| %>
@@ -225,6 +228,7 @@
                 </div>
               <% end %>
             </div>
+          <% end %>
 
         </div>
 
@@ -234,13 +238,37 @@
   </div>
 
   <div class="stats-right">
-    <div class="date">クローゼット総資産額：<span><%= "¥#{@closets.sum(:price)}" %></span></div>
-    <div class="date">アイテム平均価格：<span><%= "¥#{@closets.sum(:price).fdiv(@closets.count).round}"%></span></div>
-    <div class="date">アイテム最高価格：<span><%= "¥#{@closets.maximum(:price)}"%></span></div>
-    <div class="date bottom">所持アイテム数：<span><%= "#{@closets.length}"%></span></div>
-    <div class="date">今月の使用額：<span><%= "¥#{@closets_month.sum(:price)[Date.today.month]}"%></span></div>
-    <div class="date">今月のアイテム最高価格：<span><%= "¥#{@closets_month.maximum(:price)[Date.today.month]}" %></span></div>
-    <div class="date">今月の保管アイテム数：<span><%= "#{@closets_month.count[Date.today.month]}"%></span></div>
+    <div class="date">クローゼット総資産額：<span><%= "¥#{@closets.where(user_id: current_user.id).sum(:price)}" %></span></div>
+    <div class="date">アイテム平均価格：<span><%= "¥#{@closets.where(user_id: current_user.id).sum(:price).fdiv(@closets.count).round}"%></span></div>
+    <div class="date">アイテム最高価格：
+      <% if @closets.empty? %>
+        <span><%= "¥#{@closets.where(user_id: current_user.id).maximum(:price)}"%></span>
+      <% else %>
+        <span>¥0</span>
+      <% end %>
+    </div>
+    <div class="date bottom">所持アイテム数：<span><%= "#{@closets.where(user_id: current_user.id).length}"%></span></div>
+    <div class="date">今月の使用額：
+      <% if @closets.empty? %>
+        <span><%= "¥#{@closets_month.where(user_id: current_user.id).sum(:price)[Date.today.month]}"%></span>
+      <% else %>
+        <span>¥0</span>
+      <% end %>
+    </div>
+    <div class="date">今月のアイテム最高価格：
+      <% if @closets.empty? %>
+        <span><%= "¥#{@closets_month.where(user_id: current_user.id).maximum(:price)[Date.today.month]}" %></span>
+      <% else %>
+        <span>¥0</span>
+      <% end %>
+    </div>
+    <div class="date">今月の保管アイテム数：
+      <% if @closets.empty? %>
+        <span><%= "#{@closets_month.where(user_id: current_user.id).count[Date.today.month]}"%></span>
+      <% else %>
+        <span>0</span>
+      <% end %>
+    </div>
   </div>
 
 </div>

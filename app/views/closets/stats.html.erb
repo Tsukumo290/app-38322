@@ -1,22 +1,18 @@
 <div class="stats-title">統計</div>
 <div class="stats-contents">
   <div>
+    <div class="tab-panel panel-width">   
 
-    <div class="tab-panel panel-width">
-    
-      <div>
-        <ul class="tab-group">
-          <li class="tab tab-A is-active spring">春</li>
-          <li class="tab tab-B summer" >夏</li>
-          <li class="tab tab-C autumn">秋</li>
-          <li class="tab tab-D winter">冬</li>
-        </ul>
-      </div>
+      <ul class="tab-group">
+        <li class="tab tab-A is-active spring">春</li>
+        <li class="tab tab-B summer" >夏</li>
+        <li class="tab tab-C autumn">秋</li>
+        <li class="tab tab-D winter">冬</li>
+      </ul>
 
       <div class="panel-group panel-height">
         <div class="panel tab-A is-show">
-          <div class="panel-category">カテゴリー</div>
-          
+          <div class="panel-category">カテゴリー</div>    
           <div class="canvas-area">
             <div class="canvas"><%= pie_chart @closets.where(season_id: 1).group(:genre_id).count, legend: false, colors: [ "#cd7693","#eab9c9","#f2d6df"]%></div>
             <div class="canvas-content">
@@ -48,26 +44,24 @@
               <% end %>
             </div>
           </div>
-
           <div class="favorite-title desc">着用回数が多いアイテム</div>
           <div class="stats-images">
-          <% @favorite_desc_spring.each do |closet| %>
-            <div>
-            <div class="stats-image"><%= image_tag closet.image %></div>
-            <div class="stats-count"><%= "#{closet.favorites.count}回" %></div>
-            </div>
-          <% end %>
+            <% @favorite_desc_spring.each do |closet| %>
+              <div>
+              <div class="stats-image"><%= image_tag closet.image %></div>
+              <div class="stats-count"><%= "#{closet.favorites.count}回" %></div>
+              </div>
+            <% end %>
           </div>
           <div class="favorite-title">着用回数が少ないアイテム</div>
           <div class="stats-images">
-          <% @favorite_asc_spring.each do |closet| %>
-            <div>
-            <div class="stats-image"><%= image_tag closet.image %></div>
-            <div class="stats-count"><%= "#{closet.favorites.count}回" %></div>
-            </div>
-          <% end %>
+            <% @favorite_asc_spring.each do |closet| %>
+              <div>
+              <div class="stats-image"><%= image_tag closet.image %></div>
+              <div class="stats-count"><%= "#{closet.favorites.count}回" %></div>
+              </div>
+            <% end %>
           </div>
-
         </div>
         <div class="panel tab-B">
 
@@ -221,9 +215,9 @@
                 <div class="stats-count"><%= "#{closet.favorites.count}回" %></div>
                 </div>
               <% end %>
-              </div>
-              <div class="favorite-title">着用回数が少ないアイテム</div>
-              <div class="stats-images">
+            </div>
+            <div class="favorite-title">着用回数が少ないアイテム</div>
+            <div class="stats-images">
               <% @favorite_asc_winter.each do |closet| %>
                 <div>
                 <div class="stats-image"><%= image_tag closet.image %></div>
@@ -233,21 +227,20 @@
             </div>
 
         </div>
-      </div>
 
+      </div>
     </div>
 
   </div>
 
   <div class="stats-right">
-    <div class="date"><%= "クローゼット総資産額：¥#{@closets.sum(:price)}"%></div>
-    <div class="date"><%= "アイテム平均価格：¥#{@closets.sum(:price).fdiv(@closets.count).round}"%></div>
-    <div class="date"><%= "アイテム最高価格：¥#{@closets.maximum(:price)}"%></div>
-    <div class="date bottom"><%= "所持アイテム数：#{@closets.length}"%></div>
-    <div class="date"><%= "今月の使用額：¥#{@closets_month.sum(:price)[Date.today.month]}"%></div>
-    
-    <%#<div class="date"><%= "今月のアイテム最高価格：¥#{@closets_month.maximum(:price)[Date.today.month]}"</div>%>
-    <div class="date"><%= "今月の保管アイテム数：#{@closets_month.count[Date.today.month]}"%></div>
+    <div class="date">クローゼット総資産額：<span><%= "¥#{@closets.sum(:price)}" %></span></div>
+    <div class="date">アイテム平均価格：<span><%= "¥#{@closets.sum(:price).fdiv(@closets.count).round}"%></span></div>
+    <div class="date">アイテム最高価格：<span><%= "¥#{@closets.maximum(:price)}"%></span></div>
+    <div class="date bottom">所持アイテム数：<span><%= "#{@closets.length}"%></span></div>
+    <div class="date">今月の使用額：<span><%= "¥#{@closets_month.sum(:price)[Date.today.month]}"%></span></div>
+    <div class="date">今月のアイテム最高価格：<span><%= "¥#{@closets_month.maximum(:price)[Date.today.month]}" %></span></div>
+    <div class="date">今月の保管アイテム数：<span><%= "#{@closets_month.count[Date.today.month]}"%></span></div>
   </div>
 
 </div>

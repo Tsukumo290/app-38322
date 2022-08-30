@@ -128,7 +128,6 @@
 .bottom {
   margin-bottom: 65px;
 }
-
 .stats-footer {
   height: 30px;
 }
@@ -138,7 +137,10 @@
   align-items: flex-end;
 }
 .panel-height {
-  height: 1220px;
+  height: 1210px;
+}
+.date span {
+  color: #cc5a80;
 }
 
 /* スマホ */

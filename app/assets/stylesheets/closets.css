@@ -277,6 +277,34 @@
   margin-bottom: 5px;
 }
 
+.tab-list{
+  display: flex;
+  justify-content: end;
+}
+.tab-passive{
+  padding:5px;
+  list-style:none;
+  border:solid 1px #CCC;
+  text-align:center;
+  cursor:pointer;
+}
+.tab-content{
+  height:100%;
+  border:solid 1px #CCC;
+  border-top:none;
+  background:#eee;
+}
+.tab-box{
+  display:none;
+}
+.tab-passive.tab-active{
+  background:#F00;
+  color:#FFF;
+  transition: all 0.2s ease-out;
+}
+.tab-box.box-show{
+  display:block;
+}
 /* スマホ */
 @media (max-width: 599px) {
 

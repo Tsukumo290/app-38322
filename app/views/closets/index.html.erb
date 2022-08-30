@@ -21,44 +21,21 @@
 
       <div class="panel tab-A is-show">
 
-        <% if @closets.where(genre_id: 1, season_id: 1).present? %>
-          <div class="clothes-genre">アウター</div>
-          <div class="genre-images">
-            <% @closets.where(genre_id: 1, season_id: 1).each do |closet| %>
-              <div class="genre-image">
-                <%= link_to closet_path(closet.id), remote: true do %>
-                  <%= image_tag closet.image %>
-                <% end %>
-              </div>
-            <% end %>
+        <div class="tab-contents">
+          
+          <ul class="tab-list">
+            <li class="tab-passive tab-active">アウター</li>
+            <li class="tab-passive">トップス</li>
+            <li class="tab-passive">ボトムス</li>  
+          </ul>
+          
+          
+          <div class="tab-content">
+            <div class="tab-box box-show">Content-A</div>
+            <div class="tab-box">Content-B</div>
+            <div class="tab-box">Content-C</div>
           </div>
-        <% end %>
-
-        <% if @closets.where(genre_id: 2, season_id: 1).present? %>
-          <div class="clothes-genre">トップス</div>
-          <div class="genre-images">
-            <% @closets.where(genre_id: 2, season_id: 1).each do |closet| %>
-              <div class="genre-image">
-                <%= link_to closet_path(closet.id), remote: true do %>
-                  <%= image_tag closet.image %>
-                <% end %>
-              </div>
-            <% end %>
-          </div>
-        <% end %>
-
-        <% if @closets.where(genre_id: 3, season_id: 1).present? %>
-          <div class="clothes-genre">ボトムス</div>
-          <div class="genre-images">
-            <% @closets.where(genre_id: 3, season_id: 1).each do |closet| %>
-              <div class="genre-image">
-                <%= link_to closet_path(closet.id), remote: true do %>
-                  <%= image_tag closet.image %>
-                <% end %>
-              </div>
-            <% end %>
-          </div>
-        <% end %>
+        </div>
 
       </div>
 

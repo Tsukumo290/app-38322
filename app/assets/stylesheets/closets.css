@@ -270,6 +270,11 @@
 .tab-content{
   height:1105px;
   overflow: scroll;
+  -ms-overflow-style: none;    /* IE, Edge 対応 */
+  scrollbar-width: none;       /* Firefox 対応 */
+}
+.tab-content::-webkit-scrollbar {  /* Chrome, Safari 対応 */
+  display:none;
 }
 .tab-content img {
   height: 200px;
@@ -315,21 +320,45 @@
     height: 25px;
   }
   .panel{
-    height: 470px;
+    height: 464px;
   }
-  .clothes-genre {
-    height: 45px;
-    line-height: 45px;
-    font-size: 14px;
-  }
-
   .genre-images {
     height: 106px;
     padding-right: 4px;
   }
 
+  /* tab_categoryのcss */
+  .tab-list{
+    display: flex;
+    justify-content: center;
+  }
+  .tab-list li {
+    font-size: 12px;
+  }
+  .tab-lists {
+    padding: 0px;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+  }
+  .tab-passive{
+    padding:0px;
+    list-style:none;
+    text-align:center;
+    cursor:pointer;
+  }
+  .tab-content{
+    height:415px;
+    overflow: scroll;
+  }
+  .tab-content img {
+    height: 95px;
+    width: 95px;
+    margin-left: 8px;
+    margin-bottom: 3px;
+  }
+
   /* post-formページのcss */
-  
   .notifications {
     font-size: 12px;
     height: 24px;
@@ -395,8 +424,6 @@
     border-right: white;
     border-bottom: 1px solid lightgray;
   }
-
-
   .select-box {
     font-size: 14px;
     width: 100%;
@@ -421,8 +448,7 @@
     height: calc(100% - 20%);
   }
   
-  /* show画面のcss */
-  
+  /* show画面のcss */ 
   .show {
     height: 100%;
     width: 100%;

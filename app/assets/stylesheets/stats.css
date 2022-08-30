@@ -99,6 +99,7 @@
 .stats-images {
   display: flex;
   width: 100%;
+  padding: 0 22px 0 0;
   overflow: scroll;
   -ms-overflow-style: none;    /* IE, Edge 対応 */
   scrollbar-width: none;       /* Firefox 対応 */
@@ -130,6 +131,14 @@
 
 .stats-footer {
   height: 30px;
+}
+.down {
+  background-color: #769fcd;
+  display: flex;
+  align-items: flex-end;
+}
+.panel-height {
+  height: 1220px;
 }
 
 /* スマホ */
@@ -186,9 +195,9 @@
     height: 650px;
   }
   .favorite-title {
-    height: 36px;
+    height: 40px;
     font-size: 15px;
-    line-height: 36px;
+    line-height: 40px;
     text-align: center;
   }
   .stats-image img {
@@ -202,6 +211,9 @@
   }
   .desc {
     margin-top: 0px;
+  }
+  .stats-images {
+    padding: 0 8px 0 0;
   }
 
   .date {

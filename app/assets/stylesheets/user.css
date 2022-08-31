@@ -104,16 +104,16 @@
     margin: 0 auto;
   }
   .user-form-input input {
-    height: 42px;
+    height: 40px;
     width: 100%;
     padding-left: 10px;
     margin-bottom: 10px;
-    font-size: 14px;
+    font-size: 13px;
   }
   .user-form-btn input {
-    height: 38px;
+    height: 36px;
     width: 100%;
-    border-radius: 19px;
+    border-radius: 18px;
     border: none;
     color: white;
     background-color: #ff7c5c;
@@ -124,15 +124,15 @@
     height: 36px;
     line-height: 36px;
     text-align: center;
-    font-size: 14px;
+    font-size: 13px;
   }
   .sign-in {
-    height: 38px;
-    line-height: 38px;
+    height: 36px;
+    line-height: 36px;
     text-align: center;
     width: 100%;
-    border-radius: 19px;
-    font-size: 14px;
+    border-radius: 18px;
+    font-size: 13px;
   }
   .m {
     border: 1px solid #ff7c5c;
@@ -146,16 +146,14 @@
     color: white;
   }
   .others-account {
-    height: 38px;
-    line-height: 38px;
+    height: 36px;
+    line-height: 36px;
     text-align: center;
-    font-size: 14px;
+    font-size: 13px;
   }
-  
   .new {
     margin-bottom: 10px;
   }
-  
   .o {
     border: 1px solid gray;
   }
@@ -167,7 +165,7 @@
     width: 100%;
     padding-left: 10px;
     margin-bottom: 20px;
-    font-size: 14px;
+    font-size: 13px;
   }
   
 }

@@ -103,4 +103,14 @@
   .body {
     height: calc(100vh - 56px - 56px);
   }
+  .error-alert {
+    margin-bottom: 15px;
+    color: #dd5938;
+    font-size: 12px;
+  }
+  .login-flash-message {
+    margin-bottom: 15px;
+    color: #dd5938;
+    font-size: 12px;
+  }
 }

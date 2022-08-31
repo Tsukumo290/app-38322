@@ -15,8 +15,14 @@
       <div class="header-title"><%= link_to "タイトル", root_path %></div>
 
       <div class="header-right">
-      <div class="nickname"><%= current_user.name %></div>
-      <div><%= link_to image_tag("user.png"), edit_user_path(current_user) %></div>
+        <div class="nickname"><%= current_user.name %></div>
+        <div>
+          <% if current_user.email == 'guest@email'%>
+          <%= link_to image_tag("user.png"), destroy_user_session_path, method: :delete %>
+          <% else %>
+          <%= link_to image_tag("user.png"), edit_user_path(current_user) %>
+          <% end %>
+        </div>
       </div>
     </div>
     <% end %>

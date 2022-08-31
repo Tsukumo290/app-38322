@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :memo do
-    content { "MyString" }
-    user_id { "" }
-    closet_id { 1 }
+    content { "hoge" }
+    association :user
+    association :closet
   end
 end

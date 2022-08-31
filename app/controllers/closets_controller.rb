@@ -34,8 +34,8 @@ class ClosetsController < ApplicationController
   end
 
   def stats
-    @closets = Closet.all
-    @closets_month = Closet.group("MONTH(created_at)")
+    @closets = Closet.where(user_id: current_user.id)
+    @closets_month = Closet.group("MONTH(created_at)").where(user_id: current_user.id)
     @favorite_desc_spring = Closet.includes(:favorites).where(season_id: 1, user_id: current_user.id).sort {|a,b| b.favorites.size <=> a.favorites.size}.first(10)
     @favorite_asc_spring = Closet.includes(:favorites).where(season_id: 1, user_id: current_user.id).sort {|a,b| a.favorites.size <=> b.favorites.size}.first(10)
     @favorite_desc_summer = Closet.includes(:favorites).where(season_id: 2, user_id: current_user.id).sort {|a,b| b.favorites.size <=> a.favorites.size}.first(10)

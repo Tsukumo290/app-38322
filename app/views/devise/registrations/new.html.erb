@@ -2,7 +2,7 @@
   <div class="user-form-title">新規アカウントの作成</div>
   <div class='user-form'>
     <%= form_with model: resource, as: resource_name, url: registration_path(resource_name), local: true do |f|%>
-      <%= render "devise/shared/error_messages", resource: resource %>
+      <%= render 'shared/error_messages', model: f.object %>
       <div class='user-form-input'>
         <%= f.text_field :name, placeholder: "ニックネーム", autofocus: true%>
       </div>

@@ -57,7 +57,14 @@
   text-decoration: none;
   color: black;
 }
-
+.error-alert {
+  margin-bottom: 20px;
+  color: #dd5938;
+}
+.login-flash-message {
+  margin-bottom: 20px;
+  color: #dd5938;
+}
 /* スマホ */
 @media (max-width: 599px) {
   .header {

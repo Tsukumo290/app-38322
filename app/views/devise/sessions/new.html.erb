@@ -1,7 +1,11 @@
 <div class='user-form-content'>
   <div class="user-form-title">メールアドレスでログイン</div>
   <div class="user-form">
-    <%= form_with model: resource, as: resource_name, url: session_path(resource_name), local: true do |f|%>
+    <%= form_with model: @user, url: user_session_path, local: true do |f|%>
+      <div class='login-flash-message'>
+        <%= notice %>
+        <%= alert %>
+      </div>
       <div class='user-form-input'>
         <%= f.email_field :email, placeholder: "メールアドレス", autofocus: true%>
       </div>

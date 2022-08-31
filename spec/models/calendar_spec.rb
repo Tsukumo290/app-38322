@@ -18,7 +18,7 @@ RSpec.describe Calendar, type: :model do
         @calendar.valid?
         expect(@calendar.errors.full_messages).to include("Start time can't be blank")
       end
-      it 'imageが空では保存できない' do
+      it 'imagesが空では保存できない' do
         @calendar.images = nil
         @calendar.valid?
         expect(@calendar.errors.full_messages).to include("Images can't be blank", "Images は1枚以上6枚以下にしてください")

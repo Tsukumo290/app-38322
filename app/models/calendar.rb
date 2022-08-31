@@ -3,7 +3,6 @@ class Calendar < ApplicationRecord
   has_many_attached :image
 
   validates :image, presence: true
-  validates :start_time, presence: true
 
   FILE_NUMBER_LIMIT = 6
 

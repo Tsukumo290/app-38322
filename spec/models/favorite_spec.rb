@@ -7,7 +7,7 @@ RSpec.describe Favorite, type: :model do
 
   describe '着用回数機能' do
     context '回数を増やすことができる場合' do
-      it "user_idとcloset_idがあれば保存できる" do
+      it 'user_idとcloset_idがあれば保存できる' do
         expect(@favo).to be_valid
       end
     end

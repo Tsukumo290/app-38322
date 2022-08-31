@@ -3,7 +3,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-  
+
   has_many :closets, dependent: :destroy
   has_many :memos, dependent: :destroy
   has_many :favorites, dependent: :destroy
@@ -21,11 +21,10 @@ class User < ApplicationRecord
   end
 
   def prefecture_name
-  JpPrefecture::Prefecture.find(code: prefecture_code).try(:name_e)
+    JpPrefecture::Prefecture.find(code: prefecture_code).try(:name_e)
   end
 
   def prefecture_name=(prefecture_name)
     self.prefecture_code = JpPrefecture::Prefecture.find(name_e: prefecture_name).code
   end
-
 end

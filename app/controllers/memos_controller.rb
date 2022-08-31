@@ -2,9 +2,7 @@ class MemosController < ApplicationController
   def create
     @closet = Closet.find(params[:closet_id])
     @memo = current_user.memos.new(memo_params)
-    if @memo.save
-      render :post_memos
-    end
+    render :post_memos if @memo.save
   end
 
   def destroy
@@ -14,6 +12,7 @@ class MemosController < ApplicationController
   end
 
   private
+
   def memo_params
     params.require(:memo).permit(:content).merge(user_id: current_user.id, closet_id: params[:closet_id])
   end

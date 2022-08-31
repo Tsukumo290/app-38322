@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Calendar, type: :model do
   before do
     @calendar = FactoryBot.build(:calendar)
-    @calendar.images = [ fixture_file_upload('app/assets/images/closet.png') ]
+    @calendar.images = [fixture_file_upload('app/assets/images/closet.png')]
   end
 
   describe 'コーデ作成機能' do
@@ -21,12 +21,12 @@ RSpec.describe Calendar, type: :model do
       it 'imagesが空では保存できない' do
         @calendar.images = nil
         @calendar.valid?
-        expect(@calendar.errors.full_messages).to include("Images can't be blank", "Images は1枚以上6枚以下にしてください")
+        expect(@calendar.errors.full_messages).to include("Images can't be blank", 'Images は1枚以上6枚以下にしてください')
       end
       it '画像が7枚以上だと保存できない' do
-        @calendar.images = [ fixture_file_upload('app/assets/images/closet.png') ] * 7
+        @calendar.images = [fixture_file_upload('app/assets/images/closet.png')] * 7
         @calendar.valid?
-        expect(@calendar.errors.full_messages).to include("Images は1枚以上6枚以下にしてください")
+        expect(@calendar.errors.full_messages).to include('Images は1枚以上6枚以下にしてください')
       end
       it 'userが紐付いていないと保存できない' do
         @calendar.user = nil

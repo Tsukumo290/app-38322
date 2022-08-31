@@ -1,14 +1,12 @@
 require 'rails_helper'
 
 RSpec.describe Closet, type: :model do
-
   before do
     @closet = FactoryBot.build(:closet)
     @closet.image = fixture_file_upload('app/assets/images/closet.png')
   end
 
   describe '新規登録機能' do
-
     context '新規登録できる場合' do
       it '全ての項目の入力が存在すれば登録できる' do
         expect(@closet).to be_valid
@@ -16,7 +14,6 @@ RSpec.describe Closet, type: :model do
     end
 
     context '新規登録ができない場合' do
-
       # 入力欄が空の場合のバリデーション検証
       it 'imageが空だと出品できない' do
         @closet.image = nil
@@ -61,7 +58,7 @@ RSpec.describe Closet, type: :model do
         expect(@closet.errors.full_messages).to include('Price out of setting range')
       end
       it 'priceが10,000,000以上だと出品できない' do
-        @closet.price = 10000000
+        @closet.price = 10_000_000
         @closet.valid?
         expect(@closet.errors.full_messages).to include('Price out of setting range')
       end
@@ -79,7 +76,6 @@ RSpec.describe Closet, type: :model do
         @closet.valid?
         expect(@closet.errors.full_messages).to include('User must exist')
       end
-
     end
   end
 end

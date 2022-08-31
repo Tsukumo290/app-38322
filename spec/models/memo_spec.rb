@@ -30,5 +30,4 @@ RSpec.describe Memo, type: :model do
       end
     end
   end
-  
 end

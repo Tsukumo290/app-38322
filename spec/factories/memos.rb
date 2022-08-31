@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :memo do
-    content { "hoge" }
+    content { 'hoge' }
     association :user
     association :closet
   end

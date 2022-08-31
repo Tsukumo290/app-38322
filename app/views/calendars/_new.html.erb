@@ -1,7 +1,7 @@
 <div class="calendar-form">
   <%= form_with(model: @calendar, local: true) do |form| %>
     <div class="calendar-time"><%= form.date_select :start_time %></div>
-    <div class="calendar-file"><%= form.file_field :image, multiple: true %></div>
+    <div class="calendar-file"><%= form.file_field :images, multiple: true, name: 'post[images][]', data: {index: 0} %></div>
     <div class="calendar-submit"><%= form.submit "追加する" %></div>
   <% end %>
 </div>

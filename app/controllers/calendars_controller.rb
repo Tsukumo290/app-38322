@@ -24,6 +24,6 @@ class CalendarsController < ApplicationController
 
   private
   def calendar_params
-    params.permit(:start_time, {image: []}).merge(user_id: current_user.id)
+    params.permit(:start_time, {images: []}).merge(user_id: current_user.id)
   end
 end

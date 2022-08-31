@@ -15,10 +15,10 @@
 
         <% calendars.each do |calendar| %>
         <%= link_to calendar_path(calendar.id), method: :delete, data: { confirm: "削除しますか？" } do %>
-          <%= image_tag calendar.image[0], class: "main-image" %>
+          <%= image_tag calendar.images[0], class: "main-image" %>
         <% end %>
         <div class="other-images">
-          <% calendar.image[1..-1].each do |image| %>
+          <% calendar.images[1..-1].each do |image| %>
             <div class="other-image">
               <%= image_tag image %>
             </div>

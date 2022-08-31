@@ -247,7 +247,13 @@
 
   <div class="stats-right">
     <div class="date">クローゼット総資産額：<span><%= "¥#{@closets.where(user_id: current_user.id).sum(:price)}" %></span></div>
-    <div class="date">アイテム平均価格：<span><%= "¥#{@closets.where(user_id: current_user.id).sum(:price).fdiv(@closets.where(user_id: current_user.id).count).round}"%></span></div>
+    <div class="date">アイテム平均価格：
+      <% if @closets.present? %>
+        <span><%= "¥#{@closets.where(user_id: current_user.id).sum(:price).fdiv(@closets.where(user_id: current_user.id).length).round}"%></span>
+      <% else %>
+        <span>¥0</span>
+      <% end %>
+    </div>
     <div class="date">アイテム最高価格：
       <% if @closets.present? %>
         <span><%= "¥#{@closets.where(user_id: current_user.id).maximum(:price)}"%></span>

@@ -16,6 +16,7 @@ class User < ApplicationRecord
       user.password = SecureRandom.urlsafe_base64
       user.password_confirmation = user.password
       user.name = 'ゲスト'
+      user.prefecture_code = 13
     end
   end
 

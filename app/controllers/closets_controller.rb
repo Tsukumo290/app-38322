@@ -1,4 +1,5 @@
 class ClosetsController < ApplicationController
+  before_action :closet_find, only: [:show, :destroy]
 
   def index
     @closets = Closet.where(user_id: current_user.id).order(:color_id)
@@ -6,7 +7,6 @@ class ClosetsController < ApplicationController
   end
 
   def show
-    @closet = Closet.find(params[:id])
     respond_to do |format|
       format.html
       format.js
@@ -29,7 +29,6 @@ class ClosetsController < ApplicationController
   end
 
   def destroy
-    @closet = Closet.find(params[:id])
     @closet.destroy
     redirect_to root_path
   end
@@ -37,7 +36,6 @@ class ClosetsController < ApplicationController
   def stats
     @closets = Closet.all
     @closets_month = Closet.group("MONTH(created_at)")
-
     @favorite_desc_spring = Closet.includes(:favorites).where(season_id: 1, user_id: current_user.id).sort {|a,b| b.favorites.size <=> a.favorites.size}.first(10)
     @favorite_asc_spring = Closet.includes(:favorites).where(season_id: 1, user_id: current_user.id).sort {|a,b| a.favorites.size <=> b.favorites.size}.first(10)
     @favorite_desc_summer = Closet.includes(:favorites).where(season_id: 2, user_id: current_user.id).sort {|a,b| b.favorites.size <=> a.favorites.size}.first(10)
@@ -51,6 +49,10 @@ class ClosetsController < ApplicationController
   private
   def closet_params
     params.require(:closet).permit(:brand, :price, :image, :genre_id, :color_id, :season_id, :size_id).merge(user_id: current_user.id)
+  end
+
+  def closet_find
+    @closet = Closet.find(params[:id])
   end
 
 end

@@ -263,21 +263,21 @@
     </div>
     <div class="date bottom">所持アイテム数：<span><%= "#{@closets.length}"%></span></div>
     <div class="date">今月の使用額：
-      <% if @closets.present? %>
+      <% if @closets_month.present? %>
         <span><%= "¥#{@closets_month.sum(:price)[Date.today.month]}"%></span>
       <% else %>
         <span>¥0</span>
       <% end %>
     </div>
     <div class="date">今月のアイテム最高価格：
-      <% if @closets.present? %>
+      <% if @closets_month.present? %>
         <span><%= "¥#{@closets_month.maximum(:price)[Date.today.month]}" %></span>
       <% else %>
         <span>¥0</span>
       <% end %>
     </div>
     <div class="date">今月の保管アイテム数：
-      <% if @closets.present? %>
+      <% if @closets_month.present? %>
         <span><%= "#{@closets_month.count[Date.today.month]}"%></span>
       <% else %>
         <span>0</span>

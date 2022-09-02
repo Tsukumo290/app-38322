@@ -10,16 +10,17 @@ RSpec.describe User, type: :model do
       it 'nameとemail、passwordとpassword_confirmation、prefecture_codeが存在すれば登録できる' do
         expect(@user).to be_valid
       end
-      it 'prefecture_codeがなくても登録できる' do
-        @user.prefecture_code = ''
-        expect(@user).to be_valid
-      end
     end
     context '新規登録できない場合' do
       it 'nameが空では登録できない' do
         @user.name = ''
         @user.valid?
         expect(@user.errors.full_messages).to include("Name can't be blank")
+      end
+      it 'prefecture_codeが空では登録できない' do
+        @user.prefecture_code = ''
+        @user.valid?
+        expect(@user.errors.full_messages).to include("Prefecture code can't be blank")
       end
       it 'emailが空では登録できない' do
         @user.email = ''

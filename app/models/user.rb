@@ -10,6 +10,7 @@ class User < ApplicationRecord
   has_many :calendars, dependent: :destroy
 
   validates :name, presence: true, length: { maximum: 20 }
+  validates :prefecture_code, presence: true
 
   def self.guest
     find_or_create_by!(email: 'guest@email') do |user|

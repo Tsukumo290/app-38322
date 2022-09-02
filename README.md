@@ -25,9 +25,13 @@ https://app-38322.herokuapp.com
 ## 洗い出した要件
 [要件を定義したシート](https://docs.google.com/spreadsheets/d/1qFj1h-h8T4_inN-g-0uMeaXYFrt2IoJgWKWf-TA8VkY/edit#gid=982722306)
 
-[](## 実装した機能についての画像やGIFおよびその説明)
+[](
+  ## 実装した機能についての画像やGIFおよびその説明
+  )
 
-[](## 実装予定の機能)
+[](
+  ## 実装予定の機能
+  )
 
 ## データベース設計
 ![Closet_ER](https://user-images.githubusercontent.com/109210394/187550180-6f345ecd-ad58-421b-822f-f592575d3459.png)
@@ -35,9 +39,13 @@ https://app-38322.herokuapp.com
 ## 画面遷移図
 ![Screen](https://user-images.githubusercontent.com/109210394/188127430-1dc9e2c2-34ae-4074-a2ae-247a528dfc9c.png)
 
-[](## 開発環境)
+[](
+  ## 開発環境
+  )
 
-[](## 工夫したポイント)
+[](
+  ## 工夫したポイント
+  )
 
 ## usersテーブル
 

@@ -8,9 +8,9 @@
 https://app-38322.herokuapp.com
 
 ## テスト用アカウント
-・Basic認証ID：nobita
-・Basic認証パスワード：0807
-・メールアドレス：test@email
+・Basic認証ID：nobita  
+・Basic認証パスワード：0807  
+・メールアドレス：test@email  
 ・パスワード：test290
 
 ## 利用方法

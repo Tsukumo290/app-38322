@@ -17,7 +17,7 @@
         <div class="clothes-category"><%= form.collection_select(:genre_id, Genre.all, :id, :name, {}, {class:"select-box", id:"genre"}) %></div>
         <div class="clothes-category"><%= form.collection_select(:color_id, Color.all, :id, :name, {}, {class:"select-box", id:"clothes-category"}) %></div>
         <div class="clothes-category"><%= form.collection_select(:size_id, Size.all, :id, :name, {}, {class:"select-box", id:"size"}) %></div>
-        <div class="clothes-category"><%= form.collection_select(:season_id, Season.all, :id, :name, {}, {class:"select-box", id:"clothes-category"}) %></div>
+        <div class="clothes-category"><%= form.collection_select(:season_id, Season.all, :id, :name, {}, {class:"select-box", id:"season"}) %></div>
         <div class="closet-submit"><%= form.submit "保管する" %></div>
         </div>
 

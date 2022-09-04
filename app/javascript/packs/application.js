@@ -11,6 +11,7 @@ require('jquery')
 require('../tab')
 require('../preview')
 require('../tab_category')
+require('../select.js')
 import "chartkick/chart.js"
 
 // Uncomment to copy all static images under ../images to the output folder and reference

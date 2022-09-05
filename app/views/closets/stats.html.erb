@@ -71,7 +71,7 @@
 
           <div class="canvas-area">
             <div class="panel-category">カテゴリー</div>
-            <div class="canvas"><%= pie_chart @closets.where(season_id: 2).group(:genre_id).count, legend: false, colors: [ "#76cd76","#b9eaba","#d6f2d6"] %></div>
+            <div class="canvas"><%= pie_chart @closets.where(season_id: 2).group(:genre_id).count, legend: false, colors: [ "#69b969","#b9eaba","#d6f2d6"] %></div>
             <div class="canvas-content">
               <div class="item-count">アイテム数</div>
               <% if @closets.where(season_id: 2, genre_id: 1).present? %>

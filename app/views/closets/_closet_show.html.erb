@@ -1,10 +1,7 @@
 <div class="show">
 
   <div class="show-menu">
-    <div class="show-delete">
-    <%= link_to image_tag("delete.png"), closet_path(@closet.id), method: :delete, data: { confirm: "削除しますか？" } %>
-    
-    </div>
+    <div class="delete-img"><%= link_to image_tag("delete.png"), closet_path(@closet.id), method: :delete, data: { confirm: "削除しますか？" } %></div>
   </div>
 
   <div class="show-contents">

@@ -49,13 +49,20 @@
 .calendar-time {
   margin-bottom: 5px;
 }
+.calendar-file {
+  font-size: 15px;
+}
 .calendar-submit input {
-  height: 30px;
-  width: 111px;
+  height: 28px;
+  width: 105px;
   margin-top: 5px;
+  font-size: 15px;
 }
 #_start_time_1i {
   width: 70px;
+}
+#_start_time_2i {
+  width: 120px;
 }
 #_start_time_3i {
   width: 50px;

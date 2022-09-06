@@ -161,6 +161,31 @@
   visibility: hidden;
   transform: translate(0, 0) scale(0.8);
 }
+#closeBtn {
+  display: block;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  position: fixed;
+  top: 2vh;
+  left: 97vw;
+  cursor: pointer;
+}
+#closeBtn::before, #closeBtn::after { /* 共通設定 */
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5px; /* 棒の幅（太さ） */
+  height: 30px; /* 棒の高さ */
+  background: #333;
+}
+#closeBtn::before {
+  transform: translate(-50%,-50%) rotate(45deg);
+}
+#closeBtn::after {
+  transform: translate(-50%,-50%) rotate(-45deg);
+}
 
 /* show画面(モーダル)のcss */
 .show {
@@ -175,10 +200,10 @@
   justify-content: right;
   height: 44px;
 }
-.show-delete img {
+.delete-img img {
   height: 25px;
   width: 25px;
-  opacity: 0.8;
+  opacity: 0.7;
 }
 .show-contents {
   display: flex;

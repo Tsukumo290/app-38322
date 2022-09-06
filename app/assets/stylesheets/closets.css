@@ -176,7 +176,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 5px; /* 棒の幅（太さ） */
+  width: 4px; /* 棒の幅（太さ） */
   height: 30px; /* 棒の高さ */
   background: #333;
 }
@@ -201,8 +201,8 @@
   height: 44px;
 }
 .delete-img img {
-  height: 25px;
-  width: 25px;
+  height: 24px;
+  width: 27px;
   opacity: 0.7;
 }
 .show-contents {
@@ -478,6 +478,25 @@
     width: calc(100% - 15%);
     height: calc(100% - 20%);
   }
+  #closeBtn {
+    display: block;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    position: fixed;
+    top: 2.5vh;
+    left: 88vw;
+    cursor: pointer;
+  }
+  #closeBtn::before, #closeBtn::after { /* 共通設定 */
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 3px; /* 棒の幅（太さ） */
+    height: 20px; /* 棒の高さ */
+    background: #333;
+  }
   
   /* show画面のcss */ 
   .show {
@@ -490,6 +509,11 @@
     height: 18px;
     font-size: 12px;
     margin-bottom: 10px;
+    padding-right: 15px;
+  }
+  .delete-img img {
+    height: 17px;
+    width: 18px;
   }
   .show-contents {
     display: block;

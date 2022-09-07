@@ -1,5 +1,5 @@
 ## アプリケーション名
-タイトル
+CLouck
 
 ## アプリケーション概要
 クローゼットの中身をPC・スマホで視覚化し、ファッションアイテムを管理することができるアプリです。
@@ -27,6 +27,7 @@ https://app-38322.herokuapp.com
 
 <!-- ## 実装した機能についての画像やGIFおよびその説明 -->
 
+
 <!-- ## 実装予定の機能 -->
 
 ## データベース設計
@@ -35,7 +36,19 @@ https://app-38322.herokuapp.com
 ## 画面遷移図
 ![Screen](https://user-images.githubusercontent.com/109210394/188127430-1dc9e2c2-34ae-4074-a2ae-247a528dfc9c.png)
 
-<!-- ## 開発環境 -->
+## 開発環境
+- フロントエンド
+  HTML&CSS/JavaScript/jQuery
+- バックエンド
+  Ruby/Ruby on Rails
+- インフラ
+  Heroku/Amazon S3
+- データベース
+  MySQL
+- テキストエディタ
+  Visual Studio Code
+- タスク管理
+  GitHub
 
 <!-- ## 工夫したポイント -->
 

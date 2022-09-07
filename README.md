@@ -37,17 +37,17 @@ https://app-38322.herokuapp.com
 ![Screen](https://user-images.githubusercontent.com/109210394/188127430-1dc9e2c2-34ae-4074-a2ae-247a528dfc9c.png)
 
 ## 開発環境
-- フロントエンド
+- フロントエンド  
   HTML&CSS/JavaScript/jQuery
-- バックエンド
+- バックエンド  
   Ruby/Ruby on Rails
-- インフラ
+- インフラ  
   Heroku/Amazon S3
-- データベース
+- データベース  
   MySQL
-- テキストエディタ
+- テキストエディタ  
   Visual Studio Code
-- タスク管理
+- タスク管理  
   GitHub
 
 <!-- ## 工夫したポイント -->

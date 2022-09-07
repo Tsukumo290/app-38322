@@ -25,7 +25,7 @@ https://app-38322.herokuapp.com
 ## 洗い出した要件
 [要件を定義したシート](https://docs.google.com/spreadsheets/d/1qFj1h-h8T4_inN-g-0uMeaXYFrt2IoJgWKWf-TA8VkY/edit#gid=982722306)
 
-## 実装した機能についての画像やGIFおよびその説明
+## 実装した機能についてのGIF
 
 ### ログイン機能
 [![Image from Gyazo](https://i.gyazo.com/22db8a585bc6c337da7faa6915bb638f.gif)](https://gyazo.com/22db8a585bc6c337da7faa6915bb638f)

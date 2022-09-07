@@ -34,7 +34,7 @@ https://app-38322.herokuapp.com
 ![ER](https://user-images.githubusercontent.com/109210394/188787976-9cb4ded7-cffa-40ef-852e-ca8a922d4c1b.png)
 
 ## 画面遷移図
-![Screen](https://user-images.githubusercontent.com/109210394/188127430-1dc9e2c2-34ae-4074-a2ae-247a528dfc9c.png)
+![Screen](https://user-images.githubusercontent.com/109210394/188795170-141844bd-27e6-4129-a153-11031fa560fd.png)
 
 ## 開発環境
 - フロントエンド  

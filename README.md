@@ -31,7 +31,7 @@ https://app-38322.herokuapp.com
 <!-- ## 実装予定の機能 -->
 
 ## データベース設計
-![Closet_ER](https://user-images.githubusercontent.com/109210394/187550180-6f345ecd-ad58-421b-822f-f592575d3459.png)
+![ER](https://user-images.githubusercontent.com/109210394/188787976-9cb4ded7-cffa-40ef-852e-ca8a922d4c1b.png)
 
 ## 画面遷移図
 ![Screen](https://user-images.githubusercontent.com/109210394/188127430-1dc9e2c2-34ae-4074-a2ae-247a528dfc9c.png)
